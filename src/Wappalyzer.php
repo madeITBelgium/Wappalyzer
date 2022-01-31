@@ -465,10 +465,12 @@ class Wappalyzer
 
         foreach ($patterns as $patternName => $pattern) {
             $patternName = strtolower($patternName);
-            foreach ($this->cookies as $cookie) {
-                if ($patternName === strtolower($cookie['Name'])) {
-                    if (preg_match('/' . $pattern['regex'] . '/i', $cookie['Value'])) {
-                        $this->addDetected($appName, $app, $pattern, 'cookies', $cookie, $cookie['Name']);
+            if(is_array($this->cookies)) {
+                foreach ($this->cookies as $cookie) {
+                    if ($patternName === strtolower($cookie['Name'])) {
+                        if (preg_match('/' . $pattern['regex'] . '/i', $cookie['Value'])) {
+                            $this->addDetected($appName, $app, $pattern, 'cookies', $cookie, $cookie['Name']);
+                        }
                     }
                 }
             }
@@ -485,7 +487,7 @@ class Wappalyzer
         }
 
         foreach ($this->jsPatterns[$appName] as $key => $jsPattern) {
-            if (in_array($key, $this->js, true)) {
+            if (is_array($this->js) && in_array($key, $this->js, true)) {
                 $this->addDetected($appName, $app, $key, 'js', null);
             }
         }
