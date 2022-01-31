@@ -55,11 +55,15 @@ class Wappalyzer
         $this->parseJsPatterns();
     }
 
-    public function analyze($url)
+    public function analyze($url, $html = null, $headers = null)
     {
         $this->url = $url;
-
-        if ($this->client === false) {
+        
+        if($html !== null) {
+            $this->html = $html;
+            $this->headers = $headers;
+        }
+        else if ($this->client === false) {
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_VERBOSE, 0);
