@@ -58,6 +58,10 @@ class Wappalyzer
     public function analyze($url, $html = null, $headers = null)
     {
         $this->url = $url;
+        $this->html = null;
+        $this->headers = null;
+        $this->cookies = null;
+        $this->detected = [];
         
         if($html !== null) {
             $this->html = $html;
