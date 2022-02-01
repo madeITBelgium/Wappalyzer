@@ -64,7 +64,7 @@
       7
     ],
     "name": "Hosting panels",
-    "priority": 1
+    "priority": 2
   },
   "10": {
     "groups": [
@@ -136,7 +136,7 @@
       6
     ],
     "name": "Miscellaneous",
-    "priority": 9
+    "priority": 10
   },
   "20": {
     "groups": [
@@ -683,6 +683,21 @@
       1
     ],
     "name": "Shipping carriers",
+    "priority": 9
+  },
+  "100": {
+    "groups": [
+      15
+    ],
+    "name": "Shopify apps",
+    "priority": 9
+  },
+  "101": {
+    "groups": [
+      6,
+      16
+    ],
+    "name": "Recruitment & staffing",
     "priority": 9
   }
 }
