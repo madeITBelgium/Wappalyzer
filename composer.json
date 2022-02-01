@@ -1,6 +1,6 @@
 {
   "name": "madeitbelgium/wappalyzer",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "description": "PHP Library that uncovers the technologies used on websites.",
   "keywords": ["wappalyzer", "php", "laravel"],
   "homepage": "http://www.madeit.be",
