@@ -55,7 +55,7 @@ class Wappalyzer
         $this->parseJsPatterns();
     }
 
-    public function analyze($url, $html = null, $headers = null)
+    public function analyze($url, $html = null, $headers = null, $cats = [])
     {
         $this->url = $url;
         $this->html = null;
@@ -109,7 +109,7 @@ class Wappalyzer
             $language = is_array($matches) && count($matches) > 0 ? $matches[1] : null;
         }
 
-        $this->doAnalyze($this->apps);
+        $this->doAnalyze($this->apps, $cats);
 
         return [
             'url' => $url,
@@ -118,9 +118,12 @@ class Wappalyzer
         ];
     }
 
-    public function doAnalyze($apps)
+    public function doAnalyze($apps, $cats = [])
     {
         foreach ($apps as $appName => $app) {
+            if(count($cats) > 0 && count(array_intersect($app['cats'], $cats)) === 0) {
+                continue;
+            }
             $this->analyzeUrl($appName, $app);
             $this->analyzeHtml($appName, $app);
             $this->analyzeMeta($appName, $app);
