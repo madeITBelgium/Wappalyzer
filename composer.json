@@ -1,6 +1,6 @@
 {
   "name": "madeitbelgium/wappalyzer",
-  "version": "2.6.1",
+  "version": "2.7.0",
   "description": "PHP Library that uncovers the technologies used on websites.",
   "keywords": ["wappalyzer", "php", "laravel"],
   "homepage": "http://www.madeit.be",
@@ -14,13 +14,13 @@
     }
   ],
   "require": {
-    "illuminate/support": "5.*|6.*|7.*|8.*|9.*",
+    "illuminate/support": "*",
     "guzzlehttp/guzzle": "^6.5|7.*",
     "php": ">=7.0",
     "ext-curl": "*",
     "ext-json": "*",
-    "symfony/css-selector": "^5.3|6.*",
-    "symfony/dom-crawler": "^5.3|6.*"
+    "symfony/css-selector": "*",
+    "symfony/dom-crawler": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "~7.0|~8.0|~9.0",
