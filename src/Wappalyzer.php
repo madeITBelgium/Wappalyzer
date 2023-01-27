@@ -352,8 +352,13 @@ class Wappalyzer
         }
 
         foreach ($patterns as $pattern) {
-            if (@preg_match('~' . $pattern['regex'] . '~i', $this->html)) {
-                $this->addDetected($appName, $app, $pattern, 'html', $this->html);
+            try {
+                if (@preg_match('~' . $pattern['regex'] . '~i', $this->html)) {
+                    $this->addDetected($appName, $app, $pattern, 'html', $this->html);
+                }
+            } catch (Exception $e) {
+                \Log::error($e->getMessage() . ' ' . $pattern['regex']);
+
             }
         }
     }
