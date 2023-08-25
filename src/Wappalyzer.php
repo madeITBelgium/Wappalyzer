@@ -73,7 +73,7 @@ class Wappalyzer
             curl_setopt($ch, CURLOPT_VERBOSE, 0);
             curl_setopt($ch, CURLOPT_HEADER, 1);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); 
-            curl_setopt($ch, CURLOPT_TIMEOUT, 20)
+            curl_setopt($ch, CURLOPT_TIMEOUT, 20);
             curl_setopt($ch, CURLOPT_URL, $url);
 
             $response = curl_exec($ch);
