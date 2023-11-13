@@ -58,18 +58,47 @@
       "nv.version": "^(.+)$\\;confidence:0\\;version:\\1"
     },
     "scriptSrc": "nv\\.d3(?:\\.min)?\\.js",
-    "website": "http://nvd3.org"
+    "website": "https://nvd3.org"
   },
   "Nacelle": {
     "cats": [
       6
     ],
-    "description": "Nacelle is a headless commerce platform",
+    "description": "Nacelle is a headless ecommerce platform.",
+    "dom": {
+      "[class*='nacelle']": {
+        "text": "\\;confidence:51"
+      }
+    },
     "icon": "Nacelle.svg",
+    "implies": "GraphQL",
     "js": {
+      "__NEXT_DATA__.props.pageProps.page.nacelleEntryId": "",
       "nacelleEventData": ""
     },
-    "website": "https://nacelle.com/"
+    "pricing": [
+      "high",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://nacelle.com",
+    "xhr": "storefront\\.api\\.nacelle\\.com"
+  },
+  "NagaCommerce": {
+    "cats": [
+      6
+    ],
+    "description": "NagaCommerce is an ecommerce platform provided as a service.",
+    "icon": "NagaCommerce.svg",
+    "meta": {
+      "generator": "^NagaCommerce$"
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.nagacommerce.com"
   },
   "Nagich": {
     "cats": [
@@ -86,6 +115,43 @@
     "saas": true,
     "scriptSrc": "\\.nagich\\.co(?:m|\\.il)/core/([\\d.]+)/accessibility\\.js\\;version:\\1",
     "website": "https://www.nagich.co.il"
+  },
+  "NagishLi": {
+    "cats": [
+      68
+    ],
+    "description": "NagishLi is a free accessibility plugin from Localize*, created to provide an equal oppurtunity for webmasters to make their website accessible and make the internet more accessible for people with disability.",
+    "icon": "NagishLi.png",
+    "js": {
+      "$NagishLi": "",
+      "initNagishLi": "",
+      "nagishli_commons.version": "(.+)\\;version:\\1"
+    },
+    "pricing": [
+      "freemium",
+      "onetime"
+    ],
+    "website": "https://www.nagish.li"
+  },
+  "Naive UI": {
+    "cats": [
+      66
+    ],
+    "description": "Naive UI is a Vue.js UI library written in TypeScript, offering more than 80 treeshakable components.",
+    "dom": {
+      "style[cssr-id^='n-']": {
+        "attributes": {
+          "cssr-id": "^n-[a-z-]+$\\;confidence:99"
+        }
+      }
+    },
+    "icon": "Naive UI.svg",
+    "implies": [
+      "Vue.js",
+      "TypeScript"
+    ],
+    "oss": true,
+    "website": "https://www.naiveui.com"
   },
   "Najva": {
     "cats": [
@@ -112,6 +178,45 @@
     "icon": "Narrativ.png",
     "scriptSrc": "static\\.narrativ\\.com/",
     "website": "https://narrativ.com/"
+  },
+  "Narvar": {
+    "cats": [
+      102,
+      99
+    ],
+    "description": "Narvar is a customer experience platform that helps retailers inspire long-term customer loyalty, at all steps of the post-purchase journey.",
+    "dom": "a[href*='.narvar.com/'], img[src*='.narvar.com/']",
+    "headers": {
+      "Content-Security-Policy": "\\.narvar\\.com"
+    },
+    "icon": "Narvar.svg",
+    "js": {
+      "NARVARJS_URL": "",
+      "narvar": "\\;confidence:1"
+    },
+    "pricing": [
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://corp.narvar.com"
+  },
+  "NationBuilder": {
+    "cats": [
+      1,
+      53
+    ],
+    "description": "NationBuilder is a Los Angeles based technology start-up that develops content management and customer relationship management (CRM) software.",
+    "icon": "NationBuilder.svg",
+    "js": {
+      "NB.FBAppId": "",
+      "NB.Liquid": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://nationbuilder.com"
   },
   "Nativo": {
     "cats": [
@@ -141,18 +246,21 @@
     "scriptSrc": "tag\\.navdmp\\.com",
     "website": "https://www.navegg.com/"
   },
-  "Naver RUA": {
+  "Naver Analytics": {
     "cats": [
-      92,
-      78
+      10
     ],
-    "description": "Naver RUA (Real User Analytics) collects performance data from real users to analyze the speed of your website by country, operating system, and browser.",
-    "icon": "Naver.svg",
-    "scriptSrc": "rua-api\\.ncloud\\.com/",
-    "saas": true,
+    "description": "Naver Analytics is a Korean based analytics service.",
+    "icon": "Naver Analytics.svg",
+    "meta": {
+      "naver-site-verification": ""
+    },
     "pricing": [
+      "freemium",
       "payg"
     ],
+    "saas": true,
+    "scriptSrc": "wcs\\.naver\\.net/wcslog\\.js",
     "website": "https://analytics.naver.com"
   },
   "Naver Maps": {
@@ -160,31 +268,84 @@
       35
     ],
     "description": "Naver Maps help develop location-based services which provided by Naver.",
-    "icon": "Naver.svg",
+    "icon": "Naver Maps.svg",
     "js": {
       "naver.maps": ""
     },
-    "scriptSrc": "openapi\\.map\\.naver\\.com/openapi/v([\\d\\.]+)\\;version:\\1",
-    "saas": true,
     "pricing": [
       "freemium",
       "payg"
     ],
+    "saas": true,
+    "scriptSrc": "openapi\\.map\\.naver\\.com/openapi/v([\\d\\.]+)\\;version:\\1",
     "website": "https://www.ncloud.com/product/applicationService/maps"
   },
-  "Naver Analytics": {
+  "Naver RUA": {
     "cats": [
-      10
+      92,
+      78
     ],
-    "description": "Naver Analytics is a Korean based analytics service.",
+    "description": "Naver RUA (Real User Analytics) collects performance data from real users to analyze the speed of your website by country, operating system, and browser.",
     "icon": "Naver.svg",
-    "scriptSrc": "wcs\\.naver\\.net/wcslog\\.js",
-    "saas": true,
     "pricing": [
-      "freemium",
       "payg"
     ],
+    "saas": true,
+    "scriptSrc": "rua-api\\.ncloud\\.com/",
     "website": "https://analytics.naver.com"
+  },
+  "Navidium Shipping Protection": {
+    "cats": [
+      5
+    ],
+    "description": "Navidium is a shipping insurance company that covers packages that are lost, stolen, or damaged in transit. Navidium Shipping Protection is an optional shipping protection service where, in the event of an incident (the order is damaged, lost, or stolen during transit), we will immediately re-ship any damaged, lost, or stolen products.",
+    "icon": "Navidium.svg",
+    "js": {
+      "nvdShop": "\\.myshopify\\.com"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^.*/navidium-extension-checker\\.js$",
+    "website": "https://navidiumapp.com"
+  },
+  "Neat A/B testing": {
+    "cats": [
+      74,
+      100
+    ],
+    "description": "Neat A/B Testing is a Shopify app built by NeatShift.",
+    "icon": "Neat.png",
+    "implies": "Shopify",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.neatab\\.com/",
+    "website": "https://neatab.com"
+  },
+  "Neon CRM": {
+    "cats": [
+      53,
+      111
+    ],
+    "description": "Neon CRM, a Neon One company, is a cloud-based customer relationship management (CRM) software suite for nonprofits of all sizes. Applications include fundraising management, donor management, membership management, event registration and management, customised reporting, and more.",
+    "dom": "a[href*='.app.neoncrm.com/']",
+    "icon": "Neon One.svg",
+    "js": {
+      "_neoncrm_ga": "",
+      "neonPayCard": "",
+      "neoncrm_email_ajax_object": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://neonone.com"
   },
   "Neos CMS": {
     "cats": [
@@ -244,7 +405,39 @@
       "NS_VER": ""
     },
     "icon": "NetSuite.png",
-    "website": "http://netsuite.com"
+    "website": "https://netsuite.com"
+  },
+  "Netcore Cloud": {
+    "cats": [
+      97,
+      32
+    ],
+    "description": "Netcore Cloud is a globally recognised marketing technology SaaS company.",
+    "icon": "Netcore Cloud.svg",
+    "pricing": [
+      "poa",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.netcoresmartech\\.com/",
+    "website": "https://netcorecloud.com"
+  },
+  "Netdeal": {
+    "cats": [
+      32
+    ],
+    "description": "Netdeal is a marketing automation platform.",
+    "icon": "Netdeal.svg",
+    "js": {
+      "NetdealBuildNumber": "",
+      "NetdealJs.paywall": "",
+      "netdealStartSession": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.netdeal.com.br"
   },
   "Netlify": {
     "cats": [
@@ -257,9 +450,25 @@
       "X-NF-Request-ID": ""
     },
     "icon": "Netlify.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "poa"
+    ],
     "url": "^https?://[^/]+\\.netlify\\.(?:com|app)/",
     "website": "https://www.netlify.com/",
     "xhr": "cdn\\.netlify\\.com"
+  },
+  "Netlify Forms": {
+    "cats": [
+      110
+    ],
+    "description": "Netlify Forms is a serverless form handling solution for static websites.",
+    "dom": "form[data-netlify]",
+    "icon": "Netlify.svg",
+    "implies": "Netlify",
+    "website": "https://www.netlify.com/products/forms"
   },
   "Neto": {
     "cats": [
@@ -296,6 +505,20 @@
     },
     "website": "https://nette.org"
   },
+  "Network for Good": {
+    "cats": [
+      111
+    ],
+    "description": "Network for Good is an American certified B Corporation software company that offers fundraising software and coaching for charities and non-profit organisations.",
+    "dom": "a[href*='.networkforgood.com/']",
+    "icon": "Network for Good.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.networkforgood\\.com/",
+    "website": "https://www.networkforgood.com"
+  },
   "Neve": {
     "cats": [
       80
@@ -318,7 +541,7 @@
   },
   "New Relic": {
     "cats": [
-      10
+      78
     ],
     "description": "New Relic is a SaaS offering that focuses on performance and availability monitoring.",
     "dom": "link[href*='.newrelic.com']",
@@ -336,6 +559,22 @@
     ],
     "saas": true,
     "website": "https://newrelic.com"
+  },
+  "NewStore": {
+    "cats": [
+      19
+    ],
+    "description": "NewStore is the only integrated platform offering omnichannel solutions for stores and consumers.",
+    "icon": "NewStore.png",
+    "js": {
+      "highstreetBanner.config": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.api\\.highstreetapp\\.com/",
+    "website": "https://www.newstore.com"
   },
   "Newspack": {
     "cats": [
@@ -363,6 +602,18 @@
     ],
     "website": "https://newspack.pub/"
   },
+  "Nexcess": {
+    "cats": [
+      62,
+      88
+    ],
+    "description": "Nexcess is a web hosting service.",
+    "headers": {
+      "x-hostname": "nxcli\\.net$"
+    },
+    "icon": "nexcess.png",
+    "website": "https://www.nexcess.net"
+  },
   "Nexive": {
     "cats": [
       99
@@ -375,41 +626,143 @@
     ],
     "website": "https://www.nexive.it"
   },
+  "Next Total": {
+    "cats": [
+      6
+    ],
+    "description": "Next is leveraging the expertise, infrastructure and software it has developed for its own online business to provide a third-party ecommerce outsourcing service named Total Platform.",
+    "icon": "Next Total.svg",
+    "js": {
+      "NextBasket.NextUnlimited": "",
+      "NextFavourites.Busy": "",
+      "NextFavourites.Data.ShoppingLists": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "scriptSrc": "\\.nextdirect\\.com/",
+    "website": "https://www.next.co.uk"
+  },
   "Next.js": {
     "cats": [
+      12,
       18,
-      22
+      22,
+      57
     ],
-    "cpe": "cpe:/a:zeit:next.js",
+    "cpe": "cpe:2.3:a:zeit:next.js:*:*:*:*:*:*:*:*",
     "description": "Next.js is a React framework for developing single page Javascript applications.",
     "headers": {
       "x-powered-by": "^Next\\.js ?([0-9.]+)?\\;version:\\1"
     },
-    "icon": "vercel.svg",
+    "icon": "Next.js.svg",
     "implies": [
       "React",
-      "webpack",
+      "Webpack",
       "Node.js"
     ],
     "js": {
-      "__NEXT_DATA__": ""
+      "__NEXT_DATA__": "",
+      "next.version": "^(.+)$\\;version:\\1"
     },
     "website": "https://nextjs.org"
+  },
+  "NextAuth.js": {
+    "cats": [
+      69
+    ],
+    "cookies": {
+      "__Host-next-auth.csrf-token": "",
+      "__Secure-next-auth.callback-url": ""
+    },
+    "description": "NextAuth.js is a complete open-source authentication solution for Next.js applications.",
+    "icon": "Next-Auth.png",
+    "oss": true,
+    "requires": "Next.js",
+    "website": "https://next-auth.js.org"
   },
   "NextGEN Gallery": {
     "cats": [
       7,
       87
     ],
-    "cpe": "cpe:/a:imagely:nextgen_gallery",
+    "cpe": "cpe:2.3:a:imagely:nextgen_gallery:*:*:*:*:*:*:*:*",
     "description": "NextGEN Gallery is a free open-source image management plugin for the WordPress content management system.",
     "html": [
       "<!-- <meta name=\"NextGEN\" version=\"([\\d.]+)\" /> -->\\;version:\\1"
     ],
     "icon": "NextGEN Gallery.png",
+    "js": {
+      "nextgen_lightbox_settings.static_path": "/wp-content/plugins/nextgen-gallery/"
+    },
     "requires": "WordPress",
     "scriptSrc": "/nextgen-gallery/js/",
     "website": "https://www.imagely.com/wordpress-gallery-plugin"
+  },
+  "NextUI": {
+    "cats": [
+      66
+    ],
+    "css": "--nextui-(?:colors-accents1|colors-text|space-0|fonts-sans|fonts-mono)",
+    "description": "NextUI allows you to make beautiful, modern, and fast websites/applications regardless of your design experience, created with React.js and Stitches, based on React Aria and inspired by Vuesax.",
+    "icon": "NextUI.svg",
+    "implies": [
+      "React",
+      "Stitches"
+    ],
+    "oss": true,
+    "website": "https://nextui.org/"
+  },
+  "Nextcloud": {
+    "cats": [
+      95,
+      19
+    ],
+    "cookies": {
+      " __Host-nc_sameSiteCookielax": "",
+      "__Host-nc_sameSiteCookiestrict": ""
+    },
+    "cpe": "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:*:*:*",
+    "description": "Nextcloud is a suite of client-server software for creating and using file hosting services.",
+    "icon": "Nextcloud.svg",
+    "implies": "PHP",
+    "js": {
+      "oc_config.version": "^([\\.\\d]+)$\\;version:\\1\\;confidence:0"
+    },
+    "oss": true,
+    "pricing": [
+      "payg",
+      "recurring"
+    ],
+    "website": "https://nextcloud.com"
+  },
+  "Nextdoor Ads": {
+    "cats": [
+      36
+    ],
+    "description": "Nextdoor Ads is an easy-to-use expansion of Nextdoor’s proprietary self-serve campaign management platform, designed to help small and medium-sized businesses (SMBs) advertise on Nextdoor.",
+    "icon": "Nextdoor Ads.png",
+    "scriptSrc": "ads\\.nextdoor\\.com/",
+    "website": "https://help.nextdoor.com/s/article/About-Neighborhood-Ad-Center-NAC-Conversion-Pixel"
+  },
+  "Nextra": {
+    "cats": [
+      57
+    ],
+    "description": "Nextra is Next.js based static site generator.",
+    "dom": [
+      "div.nextra-container",
+      "div.nextra-nav-container",
+      "div.nextra-sidebar-container"
+    ],
+    "icon": "Nextra.svg",
+    "js": {
+      "__nextra_internal__": "",
+      "__nextra_pageContext__": ""
+    },
+    "oss": true,
+    "requires": "Next.js",
+    "website": "https://nextra.site/"
   },
   "Nextsale": {
     "cats": [
@@ -430,19 +783,48 @@
     "scriptSrc": "(?:api|sdk)\\.nextsale\\.io/",
     "website": "https://nextsale.io"
   },
+  "NexusPHP": {
+    "cats": [
+      1
+    ],
+    "cpe": "cpe:2.3:a:nexusphp:nexusphp:*:*:*:*:*:*:*:*",
+    "description": "NexusPHP is an open-sourced private tracker script written in PHP.",
+    "icon": "NexusPHP.png",
+    "implies": [
+      "PHP",
+      "MySQL",
+      "Redis"
+    ],
+    "meta": {
+      "generator": "^NexusPHP$"
+    },
+    "oss": true,
+    "website": "https://nexusphp.org"
+  },
+  "NexusPIPE": {
+    "cats": [
+      16
+    ],
+    "description": "NexusPIPE is a ADC and DDoS mitigation Company.",
+    "headers": {
+      "Server": "^Nexuspipe.com"
+    },
+    "icon": "NexusPIPE.png",
+    "website": "https://nexuspipe.com"
+  },
   "Nginx": {
     "cats": [
       22,
       64
     ],
-    "cpe": "cpe:/a:nginx:nginx",
+    "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*",
     "description": "Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.",
     "headers": {
       "Server": "nginx(?:/([\\d.]+))?\\;version:\\1",
       "X-Fastcgi-Cache": ""
     },
     "icon": "Nginx.svg",
-    "website": "http://nginx.org/en"
+    "website": "https://nginx.org/en"
   },
   "Niagahoster": {
     "cats": [
@@ -460,9 +842,47 @@
     ],
     "website": "https://niagahoster.co.id"
   },
+  "Nicepage": {
+    "cats": [
+      51
+    ],
+    "description": "Nicepage is a free website building tool that requires no coding skills and integrates seamlessly with all leading CMS systems.",
+    "dom": "link[href*='nicepage.css']",
+    "icon": "Nicepage.png",
+    "js": {
+      "_npAccordionInit": "",
+      "_npDialogsInit": ""
+    },
+    "meta": {
+      "generator": "Nicepage\\s([\\d\\.]+)\\;version:\\1"
+    },
+    "pricing": [
+      "freemium",
+      "onetime"
+    ],
+    "saas": true,
+    "website": "https://nicepage.com"
+  },
+  "Nift": {
+    "cats": [
+      84
+    ],
+    "description": "Nift is a marketing program for pools of local businesses. Businesses give Nift gift cards to thank and reward their customers for taking actions, like signing up for a newsletter, referring a friend, or making a purchase.",
+    "icon": "Nift.png",
+    "js": {
+      "NiftAnalytics": "",
+      "NiftJS": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.gonift.com"
+  },
   "Ninja Forms": {
     "cats": [
-      87
+      87,
+      110
     ],
     "description": "Ninja Forms is the WordPress form builder.",
     "dom": "link[href*='/wp-content/plugins/ninja-forms/']",
@@ -481,7 +901,8 @@
   },
   "NitroPack": {
     "cats": [
-      23
+      23,
+      92
     ],
     "description": "NitroPack creates optimised HTML cache for fast page loading experience.",
     "icon": "NitroPack.svg",
@@ -522,23 +943,77 @@
     "cats": [
       27
     ],
-    "cpe": "cpe:/a:nodejs:node.js",
+    "cpe": "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*",
     "description": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.",
-    "icon": "node.js.png",
-    "website": "http://nodejs.org"
+    "icon": "Node.js.svg",
+    "website": "https://nodejs.org"
   },
   "NodeBB": {
     "cats": [
       2
     ],
-    "cpe": "cpe:/a:nodebb:nodebb",
+    "cpe": "cpe:2.3:a:nodebb:nodebb:*:*:*:*:*:*:*:*",
+    "description": "NodeBB forum software is powered by Node.js and built on either a Redis or MongoDB database.",
     "headers": {
       "X-Powered-By": "^NodeBB$"
     },
-    "icon": "NodeBB.png",
+    "icon": "NodeBB.svg",
     "implies": "Node.js",
-    "scriptSrc": "^/nodebb\\.min\\.js\\?",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "/nodebb\\.min\\.js\\?",
     "website": "https://nodebb.org"
+  },
+  "NodePing": {
+    "cats": [
+      13
+    ],
+    "description": "NodePing is a tool in the Website Monitoring category of a tech stack. NodePing is an open source tool with GitHub stars and GitHub forks.",
+    "dom": "footer#poweredbynodeping",
+    "icon": "NodePing.svg",
+    "oss": true,
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://nodeping.com"
+  },
+  "Nogin": {
+    "cats": [
+      19
+    ],
+    "description": "Nogin is a platform operating as Commerce-as-a-Service (CaaS), offering cloud-based ecommerce functionalities and infrastructure for seamless integration and development of ecommerce solutions.",
+    "icon": "Nogin.png",
+    "js": {
+      "nogin.wishlist": ""
+    },
+    "pricing": [
+      "high",
+      "recurring",
+      "poa"
+    ],
+    "requiresCategory": 6,
+    "scriptSrc": "\\.nogin\\.com/",
+    "website": "https://www.nogin.com"
+  },
+  "Noibu": {
+    "cats": [
+      13
+    ],
+    "description": "Noibu helps ecommerce websites detect revenue-impacting errors on their websites and provides them with the information needed to resolve them.",
+    "icon": "noibu.svg",
+    "js": {
+      "NOIBUJS_CONFIG": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://noibu.com"
   },
   "Norton Shopping Guarantee": {
     "cats": [
@@ -580,6 +1055,62 @@
     "scriptSrc": "connect\\.nosto\\.\\w+/",
     "website": "https://www.nosto.com"
   },
+  "Nosto Visual UGC": {
+    "cats": [
+      96
+    ],
+    "description": "Nosto Visual UGC (Earlier known as Stackla) is a cloud-based content marketing platform that helps discover, curate, display and engage with user-generated content across all digital marketing platforms.",
+    "icon": "Nosto.svg",
+    "js": {
+      "Stackla": "",
+      "stacklaWidgetJsonp": ""
+    },
+    "pricing": [
+      "high",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.stackla\\.com/",
+    "website": "https://www.nosto.com/products/visual-ugc/"
+  },
+  "Notion": {
+    "cats": [
+      51
+    ],
+    "description": "Notion is a collaboration platform with modified Markdown support that integrates kanban boards, tasks, wikis, and database.",
+    "dom": "html.notion-html",
+    "icon": "Notion.svg",
+    "pricing": [
+      "freemium",
+      "recurring",
+      "low",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://notion.so"
+  },
+  "Nudgify": {
+    "cats": [
+      32
+    ],
+    "description": "Nudgify is a Social Proof & Fomo App tool that integrates seamlessly with ecommerce platform such as Shopify, WooCommerce and Magento.",
+    "icon": "Nudgify.svg",
+    "js": {
+      "nudgify.cart": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "requiresCategory": 6,
+    "saas": true,
+    "scriptSrc": [
+      "\\.nudgify\\.com/",
+      "cdn\\.convertize\\.com/nudgify-shopify\\.js"
+    ],
+    "website": "https://www.nudgify.com"
+  },
   "Nukeviet CMS": {
     "cats": [
       1
@@ -594,9 +1125,6 @@
       "generator": "NukeViet v([\\d.]+)\\;version:\\1"
     },
     "oss": true,
-    "pricing": [
-      "freemium"
-    ],
     "website": "https://nukeviet.vn/en/"
   },
   "Nuqlium": {
@@ -652,12 +1180,13 @@
       "Node.js"
     ],
     "js": {
-      "$nuxt": ""
+      "$nuxt": "",
+      "useNuxtApp": ""
     },
     "scriptSrc": [
       "/_nuxt/"
     ],
-    "website": "https://nuxtjs.org"
+    "website": "https://nuxt.com"
   },
   "nghttpx - HTTP/2 proxy": {
     "cats": [
@@ -683,6 +1212,36 @@
       "generator": "^nopCommerce$"
     },
     "oss": true,
-    "website": "http://www.nopcommerce.com"
+    "website": "https://www.nopcommerce.com"
+  },
+  "nopStation": {
+    "cats": [
+      19
+    ],
+    "description": "nopStation is a one stop ecommerce solution with custom integrations and custom built plugins based on custom tailored requirements on top of nopCommerce.",
+    "dom": "a[href*='.nop-station.com/']",
+    "icon": "nopStation.png",
+    "implies": "Microsoft ASP.NET",
+    "requires": [
+      "nopCommerce"
+    ],
+    "website": "https://www.nop-station.com"
+  },
+  "novomind iSHOP": {
+    "cats": [
+      6
+    ],
+    "description": "novomind iSHOP can be introduced rapidly, is highly scalable, has open APIs headless ecommerce and GDPR-compliant in the novomind Cloud.",
+    "icon": "novomind.svg",
+    "js": {
+      "_ishopevents": "",
+      "_ishopevents_url": "/ishop-api/events/",
+      "iShop.config.baseUrl": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.novomind.com/en/shopsystem/novomind-ishop-software"
   }
 }

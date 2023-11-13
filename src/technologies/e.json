@@ -1,9 +1,54 @@
 {
+  "E-Com Plus": {
+    "cats": [
+      108
+    ],
+    "description": "E-Com Plus is an open fair-code ecommerce platform designed to be used with headless commerce APIs.",
+    "icon": "E-Com Plus.svg",
+    "implies": [
+      "Vue.js",
+      "TypeScript"
+    ],
+    "js": {
+      "ecomPassport.storageKey": "ecomPassportClient"
+    },
+    "meta": {
+      "generator": "^E-Com\\sPlus\\sStorefront$"
+    },
+    "pricing": [
+      "poa",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://www.ecomplus.io"
+  },
+  "E-monsite": {
+    "cats": [
+      1
+    ],
+    "description": "E-monsite is a web-based platform that allows users to create and customise their own websites using a range of templates and features, without requiring coding or technical skills.",
+    "icon": "E-monsite.svg",
+    "implies": [
+      "Symfony",
+      "MySQL"
+    ],
+    "meta": {
+      "generator": "^e-monsite\\s\\(e-monsite\\.com\\)$"
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.e-monsite.com"
+  },
   "EC-CUBE": {
     "cats": [
       6
     ],
-    "cpe": "cpe:/a:lockon:ec-cube",
+    "cpe": "cpe:2.3:a:lockon:ec-cube:*:*:*:*:*:*:*:*",
     "description": "EC-CUBE is an open source package used to build ecommerce sites.",
     "icon": "EC-CUBE.svg",
     "implies": "PHP",
@@ -12,7 +57,22 @@
       "eccube\\.js",
       "win_op\\.js"
     ],
-    "website": "http://www.ec-cube.net"
+    "website": "https://www.ec-cube.net"
+  },
+  "ECharts": {
+    "cats": [
+      25
+    ],
+    "description": "ECharts is an open-source JavaScript visualisation library.",
+    "dom": "div[_echarts_instance_]",
+    "icon": "echarts.png",
+    "oss": true,
+    "scriptSrc": [
+      "/echarts\\.min\\.[a-zA-Z0-9]*\\.js",
+      "/echarts(?:\\.simple)?(?:\\.esm)?(?:\\.common)?(?:\\.min)?\\.js",
+      "cdn\\.jsdelivr\\.net/(?:npm|gh/apache)/echarts@([\\d.]+(?:-[^/]+)?|latest)/dist/echarts.*\\.js\\;version:\\1"
+    ],
+    "website": "https://echarts.apache.org/"
   },
   "EKM": {
     "cats": [
@@ -39,7 +99,7 @@
     ],
     "html": "<title>ELOG Logbook Selection</title>",
     "icon": "ELOG.png",
-    "website": "http://midas.psi.ch/elog"
+    "website": "https://midas.psi.ch/elog"
   },
   "ELOG HTTP": {
     "cats": [
@@ -50,23 +110,7 @@
     },
     "icon": "ELOG.png",
     "implies": "ELOG",
-    "website": "http://midas.psi.ch/elog"
-  },
-  "EPiServer": {
-    "cats": [
-      1
-    ],
-    "cookies": {
-      "EPiServer": "",
-      "EPiTrace": ""
-    },
-    "cpe": "cpe:/a:episerver:episerver",
-    "icon": "EPiServer.png",
-    "implies": "Microsoft ASP.NET",
-    "meta": {
-      "generator": "EPiServer"
-    },
-    "website": "http://episerver.com"
+    "website": "https://midas.psi.ch/elog"
   },
   "EPrints": {
     "cats": [
@@ -81,7 +125,39 @@
     "meta": {
       "generator": "EPrints ([\\d.]+)\\;version:\\1"
     },
-    "website": "http://www.eprints.org"
+    "website": "https://www.eprints.org"
+  },
+  "ERPNext": {
+    "cats": [
+      1
+    ],
+    "cpe": "cpe:2.3:a:frappe:erpnext:*:*:*:*:*:*:*:*",
+    "description": "ERPNext is a free and open-source integrated Enterprise Resource Planning (ERP) software developed by Frappe Technologies.",
+    "icon": "ERPNext.png",
+    "implies": "Frappe",
+    "js": {
+      "erpnext.shopping_cart": "",
+      "erpnext.subscribe_to_newsletter": ""
+    },
+    "oss": true,
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "website": "https://erpnext.com"
+  },
+  "ESW": {
+    "cats": [
+      106
+    ],
+    "description": "ESW (eShopWorld) is a company providing payments, shipping, and delivery services focusing on cross-border ecommerce.",
+    "icon": "ESW.svg",
+    "js": {
+      "eshopworld": "",
+      "eswRetailerDisplayConfiguration": ""
+    },
+    "scriptSrc": "Eswhooks\\.js",
+    "website": "https://esw.com"
   },
   "EWWW Image Optimizer": {
     "cats": [
@@ -94,9 +170,6 @@
       "ewww_webp_supported": ""
     },
     "oss": true,
-    "pricing": [
-      "freemium"
-    ],
     "requires": "WordPress",
     "scriptSrc": "/wp-content/plugins/ewww-image-optimizer/",
     "website": "https://github.com/nosilver4u/ewww-image-optimizer"
@@ -121,6 +194,79 @@
     ],
     "website": "https://ex.co",
     "xhr": "prd-collector-anon\\.ex\\.co"
+  },
+  "EZproxy": {
+    "cats": [
+      22,
+      64
+    ],
+    "description": "EZproxy is a web server and a reverse proxy that is usually used by libraries as a reverse proxy in front of electronic educational resources databases (e.g.: Scopus, PubMed, or Web of Science) in order to provide authentication and protect privacy.",
+    "excludes": [
+      "Apache HTTP Server",
+      "Nginx"
+    ],
+    "headers": {
+      "server": "^EZproxy$"
+    },
+    "icon": "default.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.oclc.org/en/ezproxy.html"
+  },
+  "Easy Hide PayPal": {
+    "cats": [
+      100
+    ],
+    "description": "Easy Hide PayPal hides PayPal button from product page, cart and checkout but keep PayPal as payment option in checkout.",
+    "icon": "Easy Hide PayPal.png",
+    "implies": "Shopify",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "easyhide\\.herculesapps\\.com/",
+    "website": "https://apps.shopify.com/easyhide"
+  },
+  "Easy Orders": {
+    "cats": [
+      6
+    ],
+    "description": "Easy Orders is an ecommerce platform that offers a pricing plan where users can create their online store and pay a fee of 0.5 EGP per order.",
+    "dom": "img[src*='easyorders.fra1.digitaloceanspaces.com/'], link[href*='easyorders.fra1.digitaloceanspaces.com/']",
+    "icon": "Easy Orders.png",
+    "implies": [
+      "PostgreSQL",
+      "Go",
+      "Node.js"
+    ],
+    "pricing": [
+      "payg"
+    ],
+    "requires": "Next.js",
+    "saas": true,
+    "website": "https://www.easy-orders.net",
+    "xhr": "api\\.easy-orders\\.net/"
+  },
+  "Easy Redirects": {
+    "cats": [
+      100
+    ],
+    "description": "Easy Redirects is a Shopify app built by Eastside, and part of the best Shopify Apps collection.",
+    "icon": "Easy Redirects.png",
+    "implies": "Shopify",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "easy-redirects\\..+/redirect-app\\.js",
+    "website": "https://apps.shopify.com/easyredirects"
   },
   "EasyDigitalDownloads": {
     "cats": [
@@ -153,6 +299,24 @@
     "implies": "Docker",
     "website": "https://easyengine.io"
   },
+  "EasyGift": {
+    "cats": [
+      100
+    ],
+    "description": "EasyGift is a tool that automates the addition of free gifts or products to the cart based on custom rules, allowing for upsells, BOGO (Buy 1 Get 1) offers, and the creation of rules based on cart value or specific products, with the ability to schedule start times for offer activation.",
+    "icon": "EasyGift.png",
+    "js": {
+      "EasyGift.nonTargetingRules": "",
+      "EasyGiftScriptLoaded": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "website": "https://apps.shopify.com/gifter-cart-auto-include"
+  },
   "EasyStore": {
     "cats": [
       6
@@ -180,7 +344,50 @@
     "text": [
       "\\bEasylog\\b"
     ],
-    "website": "http://www.easylog.com.br"
+    "website": "https://www.easylog.com.br"
+  },
+  "Ebasnet": {
+    "cats": [
+      1
+    ],
+    "description": "Ebasnet is a web project creation and management platform in the cloud. It allows anyone to set up an online store or corporate website without prior IT knowledge.",
+    "icon": "Ebasnet.svg",
+    "implies": [
+      "PHP",
+      "MySQL",
+      "Varnish",
+      "Symfony"
+    ],
+    "meta": {
+      "author": "^Ebasnet Web Solutions$"
+    },
+    "pricing": [
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdnebasnet\\.com/",
+    "website": "https://ebasnet.com"
+  },
+  "EcForce": {
+    "cats": [
+      6
+    ],
+    "description": "EcForce is an all-in-one ecommerce platform with all the functions necessary for ecommerce, from landing-page creation to order and customer data management analysis.",
+    "icon": "EcForce.png",
+    "implies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Nginx"
+    ],
+    "js": {
+      "EcForce.Models": "",
+      "EcForce.Models.Shop": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://ec-force.com"
   },
   "Ecovium": {
     "cats": [
@@ -227,7 +434,36 @@
     },
     "icon": "EdgeCast.png",
     "url": "https?://(?:[^/]+\\.)?edgecastcdn\\.net/",
-    "website": "http://www.edgecast.com"
+    "website": "https://www.edgecast.com"
+  },
+  "Edgio": {
+    "cats": [
+      31,
+      62
+    ],
+    "cookies": {
+      "layer0_bucket": "",
+      "layer0_destination": "",
+      "layer0_eid": ""
+    },
+    "description": "Edgio is an integrated suite of Edge services, from Delivery to Compute.",
+    "headers": {
+      "x-0-status": "",
+      "x-0-t": "",
+      "x-0-version": "^\\d+ ([\\d.]+) \\;version:\\1"
+    },
+    "icon": "Edgio.svg",
+    "js": {
+      "Layer0.Metrics": ""
+    },
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "/__layer0__/cache-manifest\\.js",
+    "website": "https://edg.io"
   },
   "Editor.js": {
     "cats": [
@@ -239,10 +475,56 @@
       "EditorJS": ""
     },
     "oss": true,
-    "pricing": [
-      "freemium"
-    ],
     "website": "https://editorjs.io"
+  },
+  "Efilli": {
+    "cats": [
+      67
+    ],
+    "description": "Efilli is a tool used to manage cookies on websites, providing users with data privacy control through GDPR compliance.",
+    "icon": "Efilli.svg",
+    "js": {
+      "EFILLI_GLOBAL_OPTIONS": "",
+      "Efilli": "",
+      "efilli.__cookieBlocker": ""
+    },
+    "pricing": [
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://efilli.com"
+  },
+  "Eggplant": {
+    "cats": [
+      78
+    ],
+    "description": "Eggplant is a software testing and monitoring company.",
+    "headers": {
+      "content-security-policy": "\\.eggplant\\.cloud"
+    },
+    "icon": "Eggplant.svg",
+    "pricing": [
+      "high",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.eggplant\\.cloud/",
+    "website": "https://www.eggplantsoftware.com"
+  },
+  "Ektron CMS": {
+    "cats": [
+      1
+    ],
+    "cpe": "cpe:2.3:a:ektron:ektron_content_management_system:*:*:*:*:*:*:*:*",
+    "description": "Ektron CMS is developed on the Microsoft .NET framework and is 100% ASP.NET. In 2015 Ektron merged with EPiServer.",
+    "icon": "Optimizely.svg",
+    "implies": "Microsoft ASP.NET",
+    "js": {
+      "Ektron": ""
+    },
+    "scriptSrc": "/ektron\\.javascript\\.ashx",
+    "website": "https://www.optimizely.com/ektron-cms"
   },
   "Elastic APM": {
     "cats": [
@@ -272,7 +554,11 @@
     "implies": [
       "Elasticsearch"
     ],
-    "pricing": ["recurring", "freemium", "mid"],
+    "pricing": [
+      "recurring",
+      "freemium",
+      "mid"
+    ],
     "saas": true,
     "website": "https://www.elasticpress.io/"
   },
@@ -285,10 +571,6 @@
       "STVID": "\\;confidence:50"
     },
     "description": "ElasticSuite is a merchandising suite for Magento and OroCommerce.",
-    "html": [
-      "<input [^>]*Smile_Elasticsuite[^>]*>",
-      "<[\\S\\s.*]*Smile_Elasticsuite[\\S\\s.*]*>"
-    ],
     "icon": "ElasticSuite.svg",
     "implies": [
       "PHP",
@@ -305,15 +587,21 @@
       "OroCommerce",
       "Magento"
     ],
-    "scriptSrc": "Smile_ElasticsuiteTracker/js/tracking\\.js",
+    "scriptSrc": "/Smile_ElasticsuiteTracker/",
     "website": "https://elasticsuite.io"
   },
   "Elasticsearch": {
     "cats": [
       29
     ],
+    "cpe": "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*",
     "description": "Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.",
+    "dom": "div#topsearchelastic_widget",
     "icon": "Elasticsearch.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
     "website": "https://www.elastic.co"
   },
   "Elcodi": {
@@ -328,47 +616,111 @@
       "PHP",
       "Symfony"
     ],
-    "website": "http://elcodi.io"
+    "website": "https://elcodi.io"
+  },
+  "Elcom": {
+    "cats": [
+      1
+    ],
+    "description": "The Elcom Platform is a web content management and intranet portal software written in Microsoft ASP.NET and SQL Server by Elcom Technology.",
+    "icon": "elcom.png",
+    "implies": "Microsoft ASP.NET",
+    "meta": {
+      "generator": "^elcomCMS"
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "text": "Web CMS by Elcom",
+    "website": "https://www.elcom.com.au/"
   },
   "Eleanor CMS": {
     "cats": [
       1
     ],
-    "cpe": "cpe:/a:eleanor-cms:eleanor_cms",
+    "cpe": "cpe:2.3:a:eleanor-cms:eleanor_cms:*:*:*:*:*:*:*:*",
     "icon": "Eleanor CMS.png",
     "implies": "PHP",
     "meta": {
       "generator": "Eleanor"
     },
-    "website": "http://eleanor-cms.ru"
+    "website": "https://eleanor-cms.ru"
+  },
+  "Element": {
+    "cats": [
+      52
+    ],
+    "description": "Element is a Matrix-based end-to-end encrypted messenger and secure collaboration app.",
+    "icon": "elementio.svg",
+    "meta": {
+      "application-name": "^Element$"
+    },
+    "pricing": [
+      "payg",
+      "low"
+    ],
+    "website": "https://element.io"
   },
   "Element UI": {
     "cats": [
-      12
+      66
     ],
-    "html": [
-      "<(?:div|button) class=\"el-(?:table-column|table-filter|popper|pagination|pager|select-group|form|form-item|color-predefine|color-hue-slider|color-svpanel|color-alpha-slider|color-dropdown|color-picker|badge|tree|tree-node|select|message|dialog|checkbox|checkbox-button|checkbox-group|container|steps|carousel|menu|menu-item|submenu|menu-item-group|button|button-group|card|table|select-dropdown|row|tabs|notification|radio|progress|progress-bar|tag|popover|tooltip|cascader|cascader-menus|cascader-menu|time-spinner|spinner|spinner-inner|transfer|transfer-panel|rate|slider|dropdown|dropdown-menu|textarea|input|input-group|popup-parent|radio-group|main|breadcrumb|time-range-picker|date-range-picker|year-table|date-editor|range-editor|time-spinner|date-picker|time-panel|date-table|month-table|picker-panel|collapse|collapse-item|alert|select-dropdown|select-dropdown__empty|select-dropdown__wrap|select-dropdown__list|scrollbar|switch|carousel|upload|upload-dragger|upload-list|upload-cover|aside|input-number|header|message-box|footer|radio-button|step|autocomplete|autocomplete-suggestion|loading-parent|loading-mask|loading-spinner|)"
-    ],
+    "description": "Element UI is an open-source component library specifically designed for Vue.js, offering a collection of pre-designed UI components such as buttons, forms, tables, and modals.",
+    "dom": {
+      "[class*='el-']": {
+        "attributes": {
+          "class": "el-(?:table-column|table-filter|popper|pagination|pager|select-group|form|form-item|color-predefine|color-hue-slider|color-svpanel|color-alpha-slider|color-dropdown|color-picker|badge|tree|tree-node|select|message|dialog|checkbox|checkbox-button|checkbox-group|container|steps|carousel|menu|menu-item|submenu|menu-item-group|button|button-group|card|table|select-dropdown|row|tabs|notification|radio|progress|progress-bar|tag|popover|tooltip|cascader|cascader-menus|cascader-menu|time-spinner|spinner|spinner-inner|transfer|transfer-panel|rate|slider|dropdown|dropdown-menu|textarea|input|input-group|popup-parent|radio-group|main|breadcrumb|time-range-picker|date-range-picker|year-table|date-editor|range-editor|time-spinner|date-picker|time-panel|date-table|month-table|picker-panel|collapse|collapse-item|alert|select-dropdown|select-dropdown__empty|select-dropdown__wrap|select-dropdown__list|scrollbar|switch|carousel|upload|upload-dragger|upload-list|upload-cover|aside|input-number|header|message-box|footer|radio-button|step|autocomplete|autocomplete-suggestion|loading-parent|loading-mask|loading-spinner)"
+        }
+      }
+    },
     "icon": "ElementUI.svg",
-    "implies": "Vue.js",
+    "oss": true,
+    "requires": "Vue.js",
     "website": "https://element.eleme.io/"
   },
   "Elementor": {
     "cats": [
-      51
+      51,
+      87
     ],
     "description": "Elementor is a website builder platform for professionals on WordPress.",
-    "html": [
-      "<div class=(?:\"|')[^\"']*elementor",
-      "<section class=(?:\"|')[^\"']*elementor",
-      "<link [^>]*href=(?:\"|')[^\"']*elementor/assets",
-      "<link [^>]*href=(?:\"|')[^\"']*uploads/elementor/css"
-    ],
-    "icon": "Elementor.png",
+    "dom": "link[href*='/wp-content/plugins/elementor/']",
+    "icon": "Elementor.svg",
     "js": {
-      "elementorFrontend.getElements": ""
+      "elementorFrontend.getElements": "",
+      "elementorFrontendConfig.version": "([\\d\\.]+)\\;version:\\1"
     },
-    "scriptSrc": "elementor/assets/js/[^/]+\\.js\\?ver=([\\d.]+)$\\;version:\\1",
+    "meta": {
+      "generator": "^Elementor\\s([\\d\\.]+)\\;version:\\1"
+    },
+    "pricing": [
+      "freemium",
+      "onetime",
+      "recurring"
+    ],
+    "requires": "WordPress",
+    "saas": true,
+    "scriptSrc": "/wp-content/plugins/elementor(?:-pro)?/.+frontend-modules\\.min\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
+    "website": "https://elementor.com"
+  },
+  "Elementor Cloud": {
+    "cats": [
+      88
+    ],
+    "description": "Elementor Cloud is a platform for creating and hosting WordPress websites with Elementor.",
+    "headers": {
+      "x-powered-by": "Elementor Cloud"
+    },
+    "icon": "Elementor.svg",
+    "implies": [
+      "WordPress",
+      "Elementor"
+    ],
+    "pricing": [
+      "recurring",
+      "low"
+    ],
     "website": "https://elementor.com"
   },
   "Elementor Header & Footer Builder": {
@@ -387,6 +739,24 @@
       "Elementor"
     ],
     "website": "https://github.com/brainstormforce/header-footer-elementor"
+  },
+  "ElementsKit": {
+    "cats": [
+      87
+    ],
+    "description": "ElementsKit is an addon for Elementor that adds additional customisation options to the page builder.",
+    "icon": "elementskit.svg",
+    "js": {
+      "ElementsKit_Helper": "",
+      "elementskit": ""
+    },
+    "pricing": [
+      "onetime",
+      "mid",
+      "recurring"
+    ],
+    "requires": "Elementor",
+    "website": "https://wpmet.com/plugin/elementskit"
   },
   "Elevar": {
     "cats": [
@@ -407,26 +777,111 @@
     "saas": true,
     "website": "https://www.getelevar.com"
   },
+  "Eleventy": {
+    "cats": [
+      57
+    ],
+    "description": "Eleventy (11ty) a simpler static site generator.",
+    "icon": "Eleventy.svg",
+    "meta": {
+      "generator": "^Eleventy\\sv([\\d\\.]+)$\\;version:\\1"
+    },
+    "oss": true,
+    "website": "https://www.11ty.dev"
+  },
+  "Elfsight": {
+    "cats": [
+      5
+    ],
+    "description": "Elfsight is an all-in-one platform offering 70+ customisable widgets for websites.",
+    "icon": "Elfsight.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.elfsight\\.com/",
+    "website": "https://elfsight.com"
+  },
+  "Elixir": {
+    "cats": [
+      27
+    ],
+    "description": "Elixir is a dynamic, functional language designed for building scalable and maintainable applications.",
+    "icon": "Elixir.svg",
+    "implies": "Erlang",
+    "oss": true,
+    "website": "https://elixir-lang.org"
+  },
+  "ElkArte": {
+    "cats": [
+      2
+    ],
+    "description": "ElkArte is an open-source PHP-based forum software with MySQL integration, offering features such as user authentication, topic categorisation, post formatting, private messaging, moderation tools, and customisable themes and extensions.",
+    "icon": "ElkArte.png",
+    "implies": "MySQL",
+    "js": {
+      "elk_forum_action": "",
+      "elk_iso_case_folding": ""
+    },
+    "oss": true,
+    "requires": "PHP",
+    "website": "https://www.elkarte.net"
+  },
+  "Ellucian CRM Recruit": {
+    "cats": [
+      53,
+      101
+    ],
+    "description": "Ellucian CRM Recruit is a comprehensive solution that supports your entire recruiting and admissions lifecycle.",
+    "dom": " a[href*='.elluciancrmrecruit.com/']",
+    "icon": "Ellucian CRM Recruit.svg",
+    "js": {
+      "Ellucian.Recruit": "",
+      "ellucianAddressChooseLabel": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "website": "https://www.ellucian.com/solutions/ellucian-crm-recruit"
+  },
   "Elm": {
     "cats": [
       27,
       12
     ],
+    "description": "Elm is a statically typed functional programming language created by Evan Czaplicki in 2012 for building web applications.",
     "icon": "elm.svg",
     "js": {
       "Elm.Main.embed": "\\;version:0.18",
       "Elm.Main.init": "\\;version:0.19"
     },
+    "oss": true,
     "website": "https://elm-lang.org/"
   },
   "Elm-ui": {
     "cats": [
       66
     ],
+    "description": "Elm-UI is a library for creating user interfaces in Elm programming language. It provides a set of functions and abstractions for building responsive and reusable UI components, such as buttons, forms, and layouts, in a declarative and type-safe way.",
     "html": "<style>[\\s\\S]*\\.explain > \\.s[\\s\\S]*\\.explain > \\.ctr > \\.s",
     "icon": "elm.svg",
     "implies": "Elm",
     "website": "https://github.com/mdgriffith/elm-ui"
+  },
+  "Eloomi": {
+    "cats": [
+      21
+    ],
+    "description": "Eloomi is a cloud-based learning management system (LMS) and performance management platform.",
+    "icon": "Eloomi.png",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "//cdn\\.eloomi\\.com/",
+    "website": "https://eloomi.com"
   },
   "Eloqua": {
     "cats": [
@@ -436,7 +891,7 @@
       "ELOQUA": ""
     },
     "description": "Eloqua is a Software-as-a-Service (SaaS) platform for marketing automation offered that aims to help B2B marketers and organisations manage marketing campaigns and sales lead generation.",
-    "icon": "Oracle.png",
+    "icon": "Oracle.svg",
     "js": {
       "_elq": "",
       "_elqQ": "",
@@ -449,7 +904,25 @@
       "elq_global": ""
     },
     "scriptSrc": "elqCfg\\.js",
-    "website": "http://eloqua.com"
+    "website": "https://eloqua.com"
+  },
+  "EmailJS": {
+    "cats": [
+      75
+    ],
+    "description": "EmailJS is a cloud-based email delivery service that allows you to send emails directly from your client-side JavaScript code without the need for a server-side implementation.",
+    "icon": "EmailJS.svg",
+    "js": {
+      "emailjs.sendForm": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "([\\d\\.]+)?(?:/dist)?/email\\.min\\.js\\;version:\\1",
+    "website": "https://www.emailjs.com"
   },
   "Emarsys": {
     "cats": [
@@ -464,6 +937,24 @@
     },
     "scriptSrc": "(?:static|cdn)\\.scarabresearch\\.com",
     "website": "https://emarsys.com/"
+  },
+  "Ematic Solutions": {
+    "cats": [
+      32
+    ],
+    "description": "Ematic Solutions is part of Ematic Group and started to revolve around transforming email marketing into an ROI machine.",
+    "icon": "Ematic Solutions.svg",
+    "js": {
+      "EmaticsObject": "",
+      "ematicApikey": "",
+      "ematics": "",
+      "ematicsSubscribe": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.ematicsolutions.com"
   },
   "EmbedPlus": {
     "cats": [
@@ -501,12 +992,12 @@
     "cats": [
       22
     ],
-    "cpe": "cpe:/a:embedthis:appweb",
+    "cpe": "cpe:2.3:a:embedthis:appweb:*:*:*:*:*:*:*:*",
     "headers": {
       "Server": "Mbedthis-Appweb(?:/([\\d.]+))?\\;version:\\1"
     },
     "icon": "Embedthis.png",
-    "website": "http://embedthis.com/appweb"
+    "website": "https://embedthis.com/appweb"
   },
   "Embedly": {
     "cats": [
@@ -529,7 +1020,7 @@
     "cats": [
       12
     ],
-    "cpe": "cpe:/a:emberjs:ember.js",
+    "cpe": "cpe:2.3:a:emberjs:ember.js:*:*:*:*:*:*:*:*",
     "icon": "Ember.js.png",
     "js": {
       "Ember": "",
@@ -537,7 +1028,7 @@
       "EmberENV": ""
     },
     "scripts": "@overview\\s+Ember -[\\s\\S]+@version\\s+(.+)\\;version:\\1",
-    "website": "http://emberjs.com"
+    "website": "https://emberjs.com"
   },
   "Emotion": {
     "cats": [
@@ -547,12 +1038,45 @@
     "description": "Emotion is a library designed for writing CSS styles with JavaScript.",
     "dom": "style[data-emotion], style[data-emotion-css]",
     "icon": "Emotion.png",
-    "website": "http://emotion.sh"
+    "website": "https://emotion.sh"
+  },
+  "Emotive": {
+    "cats": [
+      32
+    ],
+    "description": "Emotive is a computer software company that provides SaaS, Mobile Marketing, NLP, machine learning, and B2B.",
+    "icon": "Emotive.svg",
+    "js": {
+      "emotivePopupInitializing": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "scriptSrc": "emotivecdn\\.io/",
+    "website": "https://emotive.io"
+  },
+  "Empretienda": {
+    "cats": [
+      6
+    ],
+    "description": "Empretienda is a platform that allows you to create and manage your own online store.",
+    "headers": {
+      "set-cookie": "^EMPRETIENDA_SESSION"
+    },
+    "icon": "Empretienda.png",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.empretienda.com"
   },
   "Enable": {
     "cats": [
-      68,
-      87
+      68
     ],
     "description": "Enable is a web accessibility plugin by uPress.",
     "icon": "Enable.png",
@@ -563,9 +1087,22 @@
       "freemium",
       "poa"
     ],
+    "scriptSrc": "cdn\\.enable\\.co\\.il/",
+    "website": "https://www.enable.co.il"
+  },
+  "Endurance Page Cache": {
+    "cats": [
+      87,
+      23
+    ],
+    "description": "Endurance Page Cache adds basic file-based caching to WordPress.",
+    "headers": {
+      "x-endurance-cache-level": ""
+    },
+    "icon": "endurance-cache.png",
+    "oss": true,
     "requires": "WordPress",
-    "scriptSrc": "cdn\\.enable\\.co\\.il/.+\\.js\\?ver=(\\d+(?:\\.\\d+)+)\\;version:\\1",
-    "website": "https://www.enable-accessibility.com"
+    "website": "https://github.com/bluehost/endurance-page-cache"
   },
   "Engagio": {
     "cats": [
@@ -577,6 +1114,18 @@
       "web-analytics\\.engagio\\.com/api/"
     ],
     "website": "https://www.engagio.com/"
+  },
+  "Engintron": {
+    "cats": [
+      33
+    ],
+    "description": "Engintron is a plugin that integrates Nginx to cPanel/WHM server.",
+    "headers": {
+      "X-Server-Powered-By": "^Engintron$"
+    },
+    "icon": "engintron.png",
+    "requires": "Nginx",
+    "website": "https://github.com/engintron/engintron"
   },
   "Enigma": {
     "cats": [
@@ -609,6 +1158,21 @@
     "saas": true,
     "scriptSrc": "\\.enjin\\.com/",
     "website": "https://www.enjin.com"
+  },
+  "Enlistly": {
+    "cats": [
+      100
+    ],
+    "description": "Enlistly tracks referral orders in realtime. Orders that are partially refunded, refunded, or cancelled update on the fly.",
+    "icon": "Enlistly.png",
+    "implies": "Shopify",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "scriptSrc": "cdn\\.enlistly\\.com/",
+    "website": "https://enlistly.com"
   },
   "Ensi": {
     "cats": [
@@ -698,7 +1262,7 @@
     "cats": [
       64
     ],
-    "cpe": "cpe:/a:envoyproxy:envoy",
+    "cpe": "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
     "description": "Envoy is an open-source edge and service proxy, designed for cloud-native applications.",
     "headers": {
       "Server": "^envoy$",
@@ -736,7 +1300,7 @@
       "enyo": ""
     },
     "scriptSrc": "enyo\\.js",
-    "website": "http://enyojs.com"
+    "website": "https://enyojs.com"
   },
   "Epoch": {
     "cats": [
@@ -756,7 +1320,7 @@
       "epomCustomParams": ""
     },
     "url": "^https?://(?:[^/]+\\.)?ad(?:op)?shost1\\.com/",
-    "website": "http://epom.com"
+    "website": "https://epom.com"
   },
   "EqualWeb": {
     "cats": [
@@ -767,17 +1331,65 @@
     "scriptSrc": "cdn\\.equalweb\\.com.*\\.js",
     "website": "https://www.equalweb.com/"
   },
+  "EraofEcom Cartroids": {
+    "cats": [
+      100
+    ],
+    "description": "EraofEcom Cartroids makes it easy for you to create highly targeted upsells, cross-sells and bundle offers.",
+    "icon": "EraofEcom.png",
+    "implies": "Shopify",
+    "js": {
+      "cartroids.appBase": "cartroids\\.eraofecom\\.org"
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://eraofecom.org/collections/tech/products/cartroids"
+  },
+  "EraofEcom MTL": {
+    "cats": [
+      100
+    ],
+    "description": "EraofEcom MTL is a Shopify pop up app that enables you to catch your website visitors.",
+    "icon": "EraofEcom.png",
+    "implies": "Shopify",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "mtl\\.eraofecom\\.org",
+    "website": "https://eraofecom.org/collections/tech/products/milk-the-leads"
+  },
+  "EraofEcom WinAds": {
+    "cats": [
+      100
+    ],
+    "description": "EraofEcom WinAds is an all-in-one Facebook pixel app for Shopify.",
+    "dom": "link[href*='winads.eraofecom.org']",
+    "icon": "EraofEcom.png",
+    "implies": "Shopify",
+    "js": {
+      "win_ads.baseURL": "winads\\.eraofecom\\.org"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://eraofecom.org/collections/tech/products/win-ads-manager"
+  },
   "Erlang": {
     "cats": [
       27
     ],
-    "cpe": "cpe:/a:erlang:erlang%2fotp",
+    "cpe": "cpe:2.3:a:erlang:erlang%2fotp:*:*:*:*:*:*:*:*",
     "description": "Erlang is a general-purpose, concurrent, functional programming language, and a garbage-collected runtime system.",
     "headers": {
       "Server": "Erlang( OTP/(?:[\\d.ABR-]+))?\\;version:\\1"
     },
     "icon": "Erlang.png",
-    "website": "http://www.erlang.org"
+    "website": "https://www.erlang.org"
   },
   "Errorception": {
     "cats": [
@@ -865,7 +1477,7 @@
     "cats": [
       24
     ],
-    "cpe": "cpe:/a:etherpad:etherpad",
+    "cpe": "cpe:2.3:a:etherpad:etherpad:*:*:*:*:*:*:*:*",
     "description": "Etherpad is an open-source, web-based collaborative real-time editor, allowing authors to simultaneously edit a text document, and see all of the participants' edits in real-time, with the ability to display each author's text in their own colour.",
     "headers": {
       "Server": "^Etherpad"
@@ -881,6 +1493,18 @@
     ],
     "website": "https://etherpad.org"
   },
+  "Ethers": {
+    "cats": [
+      59
+    ],
+    "description": "Ethers is a complete, tiny and simple Ethereum library.",
+    "icon": "Ethers.svg",
+    "js": {
+      "_ethers": ""
+    },
+    "oss": true,
+    "website": "https://ethers.org/"
+  },
   "EthicalAds": {
     "cats": [
       36
@@ -892,6 +1516,41 @@
       "media\\.ethicalads\\.io"
     ],
     "website": "https://www.ethicalads.io/"
+  },
+  "Eticex": {
+    "cats": [
+      6
+    ],
+    "description": "Eticex is as an ecommerce infrastructure provider that offers ecommerce packages and customisable high-performance ecommerce solutions.",
+    "icon": "Eticex.svg",
+    "implies": [
+      "MySQL",
+      "React",
+      "PHP"
+    ],
+    "pricing": [
+      "recurring",
+      "mid"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.eticex\\.com/",
+    "website": "https://www.eticex.com"
+  },
+  "Etix": {
+    "cats": [
+      104
+    ],
+    "description": "Etix is an international web-based ticketing service provider for the entertainment, travel, and sports industries.",
+    "dom": "a[href*='.etix.com/ticket/'][target='_blank']",
+    "icon": "Etix.svg",
+    "js": {
+      "Etix.javaContext": ""
+    },
+    "pricing": [
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://hello.etix.com"
   },
   "Etracker": {
     "cats": [
@@ -910,6 +1569,45 @@
     "saas": true,
     "scriptSrc": "\\.etracker\\.com",
     "website": "https://www.etracker.com"
+  },
+  "EventOn": {
+    "cats": [
+      72,
+      87
+    ],
+    "description": "EventON is event calendar for WordPress.",
+    "dom": "link#eventon_dynamic_styles-css, link[href*='/css/eventon_styles\\.css']",
+    "icon": "eventon.png",
+    "website": "https://www.myeventon.com"
+  },
+  "Everflow": {
+    "cats": [
+      10
+    ],
+    "description": "Everflow is a partner marketing analytics platform.",
+    "icon": "Everflow.png",
+    "pricing": [
+      "high",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "everflow\\.js",
+    "website": "https://www.everflow.io"
+  },
+  "EveryAction": {
+    "cats": [
+      111
+    ],
+    "description": "EveryAction provides fundraising software, donor management software, and CRM software to nonprofit organisations.",
+    "dom": "a[href*='secure.everyaction.com/'], div[data-form-url*='secure.everyaction.com/']",
+    "icon": "EveryAction.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.everyaction\\.com/",
+    "website": "https://www.everyaction.com"
   },
   "Eveve": {
     "cats": [
@@ -965,6 +1663,26 @@
     "scriptSrc": "/wp-content/plugins/google-analytics-dashboard-for-wp/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
     "website": "https://www.exactmetrics.com"
   },
+  "Exemptify": {
+    "cats": [
+      106,
+      100
+    ],
+    "description": "Exemptify allows you to conduct proper EU B2B transactions by validating EU VAT IDs.",
+    "icon": "Exemptify.png",
+    "implies": "Shopify",
+    "js": {
+      "ExemptifyTriggerUpdate": "",
+      "m4u_ex_vat_postfix_txt": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.modules4u\\.biz/shopify/exemptify",
+    "website": "https://modules4u.biz/exemptify"
+  },
   "Exhibit": {
     "cats": [
       25
@@ -975,7 +1693,7 @@
       "Exhibit.version": "^(.+)$\\;version:\\1"
     },
     "scriptSrc": "exhibit.*\\.js",
-    "website": "http://simile-widgets.org/exhibit/"
+    "website": "https://simile-widgets.org/exhibit/"
   },
   "ExitIntel": {
     "cats": [
@@ -1030,6 +1748,25 @@
     "scriptSrc": "expertrec\\.com/api/js/ci_common\\.js\\?id=.*",
     "website": "https://www.expertrec.com/"
   },
+  "Expivi": {
+    "cats": [
+      105
+    ],
+    "description": "Expivi specialises in 3D visualisation technology for ecommerce stores.",
+    "dom": "iframe[src*='.expivi.net/']",
+    "icon": "Expivi.svg",
+    "js": {
+      "ExpiviComponent": "",
+      "expivi": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.expivi\\.(?:com|net)/",
+    "website": "https://www.expivi.com"
+  },
   "Exponea": {
     "cats": [
       97
@@ -1051,14 +1788,14 @@
       18,
       22
     ],
-    "cpe": "cpe:/a:expressjs:express",
+    "cpe": "cpe:2.3:a:expressjs:express:*:*:*:*:*:*:*:*",
     "description": "Express is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.",
     "headers": {
-      "X-Powered-By": "^Express$"
+      "X-Powered-By": "^Express(?:$|,)"
     },
-    "icon": "Express.png",
+    "icon": "Express.svg",
     "implies": "Node.js",
-    "website": "http://expressjs.com"
+    "website": "https://expressjs.com"
   },
   "ExpressionEngine": {
     "cats": [
@@ -1069,18 +1806,18 @@
       "exp_last_activity": "",
       "exp_tracker": ""
     },
-    "cpe": "cpe:/a:ellislab:expressionengine",
+    "cpe": "cpe:2.3:a:ellislab:expressionengine:*:*:*:*:*:*:*:*",
     "description": "ExpressionEngine is a free and open-source CMS.",
     "icon": "ExpressionEngine.svg",
     "implies": "PHP",
     "oss": true,
-    "website": "http://expressionengine.com"
+    "website": "https://expressionengine.com/"
   },
   "ExtJS": {
     "cats": [
       12
     ],
-    "cpe": "cpe:/a:sencha:ext_js",
+    "cpe": "cpe:2.3:a:sencha:ext_js:*:*:*:*:*:*:*:*",
     "icon": "ExtJS.png",
     "js": {
       "Ext": "",
@@ -1182,23 +1919,6 @@
     "scriptSrc": "/wp-content/themes/mesmerize(?:-pro)?/",
     "website": "https://extendthemes.com/mesmerize"
   },
-  "Extendify": {
-    "cats": [
-      87
-    ],
-    "description": "Extendify (formerly Redux framework) is one of the most popular, advanced, and free to use option panel frameworks for WordPress themes and plugins.",
-    "icon": "Extendify.svg",
-    "meta": {
-      "framework": "^Redux ([\\d\\.]+)\\;version:\\1"
-    },
-    "pricing": [
-      "freemium",
-      "low",
-      "recurring"
-    ],
-    "requires": "WordPress",
-    "website": "https://extendify.com"
-  },
   "Extole": {
     "cats": [
       94,
@@ -1286,7 +2006,7 @@
     "icon": "e107.png",
     "implies": "PHP",
     "scriptSrc": "[^a-z\\d]e107\\.js",
-    "website": "http://e107.org"
+    "website": "https://e107.org"
   },
   "eBay Partner Network": {
     "cats": [
@@ -1359,6 +2079,18 @@
     "saas": true,
     "website": "https://www.ekomi.de"
   },
+  "eNamad": {
+    "cats": [
+      19
+    ],
+    "description": "eNamad is an electronic trust symbol.",
+    "dom": "a[href*='.enamad.ir/'][target='_blank'], div.e-namad-widget-wrapper, img[src*='.enamad.ir/']",
+    "icon": "eNamad.png",
+    "meta": {
+      "enamad": "^\\d+$"
+    },
+    "website": "https://enamad.ir/"
+  },
   "ePages": {
     "cats": [
       6
@@ -1376,13 +2108,13 @@
       "recurring"
     ],
     "saas": true,
-    "website": "http://www.epages.com/"
+    "website": "https://www.epages.com/"
   },
   "eSSENTIAL Accessibility": {
     "cats": [
       68
     ],
-    "description": "eSSENTIAL Accessibility provides an accessibility overlay for websites.",
+    "description": "eSSENTIAL Accessibility is a digital accessibility-as-a-service platform.",
     "dom": " a[href*='.essentialaccessibility.com'] > img",
     "icon": "eSSENTIAL Accessibility.png",
     "pricing": [
@@ -1390,6 +2122,38 @@
     ],
     "saas": true,
     "website": "https://www.essentialaccessibility.com"
+  },
+  "eShopCRM": {
+    "cats": [
+      53
+    ],
+    "description": "eShopCRM is an ecommerce CRM for Shopify.",
+    "icon": "eShopCRM.png",
+    "implies": "Shopify",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "eshopcrm\\.com/",
+    "website": "https://eshopcrm.com"
+  },
+  "eSputnik": {
+    "cats": [
+      32,
+      97
+    ],
+    "description": "eSputnik is a marketing automation service for ecommerce.",
+    "icon": "eSputnik.svg",
+    "js": {
+      "esSdk": "^es$"
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "(?://|\\.)esputnik\\.com/",
+    "website": "https://esputnik.com"
   },
   "eSyndiCat": {
     "cats": [
@@ -1406,7 +2170,7 @@
     "meta": {
       "generator": "^eSyndiCat "
     },
-    "website": "http://esyndicat.com"
+    "website": "https://esyndicat.com"
   },
   "eWAY Payments": {
     "cats": [
@@ -1418,18 +2182,6 @@
     "scriptSrc": "secure\\.ewaypayments\\.com",
     "website": "https://www.eway.com.au/"
   },
-  "eZ Platform": {
-    "cats": [
-      1,
-      6
-    ],
-    "icon": "eZ.svg",
-    "implies": "Symfony",
-    "meta": {
-      "generator": "eZ Platform"
-    },
-    "website": "https://ezplatform.com/"
-  },
   "eZ Publish": {
     "cats": [
       1,
@@ -1438,6 +2190,7 @@
     "cookies": {
       "eZSESSID": ""
     },
+    "cpe": "cpe:2.3:a:ez:ez_publish:*:*:*:*:*:*:*:*",
     "headers": {
       "X-Powered-By": "^eZ Publish"
     },
@@ -1447,6 +2200,25 @@
       "generator": "eZ Publish"
     },
     "website": "https://github.com/ezsystems/ezpublish-legacy"
+  },
+  "ebisumart": {
+    "cats": [
+      6
+    ],
+    "description": "ebisumart is a cloud-based storefront system for developing and renewing high-quality ecommerce websites.",
+    "icon": "ebisumart.svg",
+    "js": {
+      "Ebisu.FontChanger": "",
+      "Ebisu.FontChanger.map.L": "",
+      "ebisu_conv": ""
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://www.ebisumart.com"
   },
   "ef.js": {
     "cats": [
@@ -1458,7 +2230,7 @@
       "efCore": ""
     },
     "scriptSrc": "/ef(?:-core)?(?:\\.min|\\.dev)?\\.js",
-    "website": "http://ef.js.org"
+    "website": "https://ef.js.org"
   },
   "emBlue": {
     "cats": [
@@ -1488,7 +2260,7 @@
     },
     "icon": "enduro.js.svg",
     "implies": "Node.js",
-    "website": "http://endurojs.com"
+    "website": "https://endurojs.com"
   },
   "etika": {
     "cats": [
@@ -1519,7 +2291,7 @@
     "cats": [
       1
     ],
-    "cpe": "cpe:/a:experiencedcms:experiencedcms",
+    "cpe": "cpe:2.3:a:experiencedcms:experiencedcms:*:*:*:*:*:*:*:*",
     "icon": "experiencedCMS_Logo.png",
     "implies": "PHP",
     "meta": {

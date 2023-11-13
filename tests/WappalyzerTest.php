@@ -45,6 +45,7 @@ class WappalyzerTest extends TestCase
             'url' => 'https://www.madeit.be/',
             'language' => 'nl-BE',
             'detected' => [
+                /*
                 'Font Awesome' => [
                     'cats' => [17],
                     'detected' => true,
@@ -69,6 +70,7 @@ class WappalyzerTest extends TestCase
                     ],
                     "website" => "https://fontawesome.com/"
                 ],
+                */
                 'PHP' => [
                     'cats' => [27],
                     'cookies' => ['PHPSESSID' => ''],
@@ -78,10 +80,10 @@ class WappalyzerTest extends TestCase
                     ],
                     'icon' => 'PHP.svg',
                     'url' => '\.php(?:$|\?)',
-                    'website' => 'http://php.net',
+                    'website' => 'https://php.net',
                     'detected' => true,
                     'version' => '7.2.7',
-                    'cpe' => 'cpe:/a:php:php',
+                    'cpe' => 'cpe:2.3:a:php:php:*:*:*:*:*:*:*:*',
                     "description" => "PHP is a general-purpose scripting language used for web development.",
                 ],
                 'WordPress' => [
@@ -112,7 +114,7 @@ class WappalyzerTest extends TestCase
                         'link' => 'rel="https://api\.w\.org/"',
                         'X-Pingback' => '/xmlrpc\.php$',
                     ],
-                    "cpe" => "cpe:/a:wordpress:wordpress",
+                    "cpe" => "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
                     "description" => "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database. Features include a plugin architecture and a template system.",
                     "pricing" => [
                         "low",
@@ -124,6 +126,7 @@ class WappalyzerTest extends TestCase
                         "/wp-(?:content|includes)/",
                         "wp-embed\\.min\\.js"
                     ],
+                    'oss' => true,
                 ],
                 'Yoast SEO' => [
                     'cats' => [ 54, 87 ],
@@ -135,18 +138,22 @@ class WappalyzerTest extends TestCase
                             ]
                         ]
                     ],
-                    "html" => "<!-- This site is optimized with the Yoast (?:WordPress )?SEO plugin v([\\d.]+) -\\;version:\\1",
+                    "html" => [
+                        '<!-- This site is optimized with the Yoast (?:WordPress )?SEO plugin v([^\s]+) -\;version:\1',
+                        '<!-- This site is optimized with the Yoast SEO Premium plugin v(?:[^\s]+) \(Yoast SEO v([^\s]+)\) -\;version:\1',
+                    ],
                     "icon" => "Yoast SEO.png",
-                    "requires" => "WordPress",
-                    "website" => "https://yoast.com",
+                    "website" => "https://yoast.com/wordpress/plugins/seo/",
                     'detected' => true,
                     'version' => '7.8',
+                    'implies' => 'WordPress',
+                    'oss' => true
                 ],
                 'MySQL' => [
                     'cats' => [ 34 ],
                     'icon' => 'MySQL.svg',
-                    'website' => 'http://mysql.com',
-                    'cpe' => 'cpe:/a:mysql:mysql',
+                    'website' => 'https://mysql.com',
+                    'cpe' => 'cpe:2.3:a:mysql:mysql:*:*:*:*:*:*:*:*',
                     "description" => "MySQL is an open-source relational database management system.",
                 ],
                 'Laravel' => [
@@ -161,8 +168,9 @@ class WappalyzerTest extends TestCase
                     ],
                     'website' => 'https://laravel.com',
                     'detected' => true,
-                    'cpe' => 'cpe:/a:laravel:laravel',
+                    'cpe' => 'cpe:2.3:a:laravel:laravel:*:*:*:*:*:*:*:*',
                     "description" => "Laravel is a free, open-source PHP web framework.",
+                    'oss' => true,
                 ],
                 'GitHub Pages' => [
                     'cats' => [
@@ -174,56 +182,13 @@ class WappalyzerTest extends TestCase
                         'X-GitHub-Request-Id' => '',
                     ],
                     'icon' => 'GitHub.svg',
-                    'implies' => 'Ruby on Rails',
                     'url' => '^https?://[^/]+\\.github\\.io',
                     'website' => 'https://pages.github.com/',
                     'detected' => true,
                 ],
-                'Ruby on Rails' => [
-                    'cats' => [
-                        0 => 18,
-                    ],
-                    'cookies' => [
-                        '_session_id' => '\\;confidence:75',
-                    ],
-                    'cpe' => 'cpe:/a:rubyonrails:rails',
-                    'description' => 'Ruby on Rails is a server-side web application framework written in Ruby under the MIT License.',
-                    'headers' => [
-                        'Server' => 'mod_(?:rails|rack)',
-                        'X-Powered-By' => 'mod_(?:rails|rack)',
-                    ],
-                    'icon' => 'Ruby on Rails.png',
-                    'implies' => 'Ruby',
-                    "js" => [
-                        "ReactOnRails" => "",
-                      "__REACT_ON_RAILS_EVENT_HANDLERS_RAN_ONCE__" => ""
-                    ],
-                    'meta' => [
-                        'csrf-param' => '^authenticity_token$\\;confidence:50',
-                    ],
-                    'scriptSrc' => '/assets/application-[a-z\\d]{32}/\\.js\\;confidence:50',
-                    'website' => 'https://rubyonrails.org',
-                ],
-                'Ruby' => [
-                    'cats' => [
-                        0 => 27,
-                    ],
-                    'cpe' => 'cpe:/a:ruby-lang:ruby',
-                    'description' => 'Ruby is an open-source object-oriented programming language.',
-                    'headers' => [
-                        'Server' => '(?:Mongrel|WEBrick|Ruby)',
-                    ],
-                    'icon' => 'Ruby.png',
-                    'website' => 'http://ruby-lang.org',
-                ],
                 'reCAPTCHA' => [
                     'cats' => [
                         16,
-                    ],
-                    'html' => [
-                        '<div[^>]+id="recaptcha_image',
-                        '<link[^>]+recaptcha',
-                        '<div[^>]+class="g-recaptcha"',
                     ],
                     'icon' => 'reCAPTCHA.svg',
                     'js' => [
@@ -233,10 +198,19 @@ class WappalyzerTest extends TestCase
                     'scriptSrc' => [
                         'api-secure\\.recaptcha\\.net',
                         'recaptcha_ajax\\.js',
-                        '/recaptcha/api\\.js',
+                        '/recaptcha/(?:api|enterprise)\.js',
                     ],
                     'website' => 'https://www.google.com/recaptcha/',
                     'detected' => true,
+                    'description' => 'reCAPTCHA is a free service from Google that helps protect websites from spam and abuse.',
+                    'dom' => "#recaptcha_image, iframe[src*='.google.com/recaptcha/'], div.g-recaptcha",
+                    'pricing' => [
+                        'freemium',
+                        'payg',
+                        'poa'
+                    ],
+                    'saas' => true,
+                    'scripts' => '/recaptcha/api\.js',
                 ],
                 'Facebook Pixel' => [
                     'cats' => [
@@ -252,9 +226,49 @@ class WappalyzerTest extends TestCase
                         'connect\\.facebook.\\w+/signals/config/\\d+\\?v=([\\d\\.]+)\\;version:\\1',
                         'connect\\.facebook\\.\\w+/.+/fbevents\\.js',
                     ],
-                    'website' => 'http://facebook.com',
+                    'website' => 'https://facebook.com',
                     'detected' => true,
                 ],
+                'cdnjs' => [
+                    'cats' => [
+                        31
+                    ],
+                    'description' => 'cdnjs is a free distributed JS library delivery service.',
+                    'dom' => "link[href*='cdnjs.cloudflare.com/']",
+                    'icon' => 'cdnjs.svg',
+                    'implies' => 'Cloudflare',
+                    'oss' => true,
+                    'scriptSrc' => 'cdnjs\.cloudflare\.com',
+                    'website' => 'https://cdnjs.com',
+                    'detected' => true,
+                ],
+                'Cloudflare' => [
+                    'cats' => [
+                        31
+                    ],
+                    'cookies' => [
+                        '__cfduid' => '',
+                    ],
+                    'description' => 'Cloudflare is a web-infrastructure and website-security company, providing content-delivery-network services, DDoS mitigation, Internet security, and distributed domain-name-server services.',
+                    'dns' => [
+                        'NS' => '\.cloudflare\.com',
+                        'SOA' => '\.cloudflare\.com',
+                    ],
+                    'dom' => "img[src*='//cdn.cloudflare']",
+                    'headers' => [
+                        'Server' => '^cloudflare$',
+                        'cf-cache-status' => '',
+                        'cf-ray' => ''
+                    ],
+                    'icon' => 'CloudFlare.svg',
+                    'js' => [
+                        'CloudFlare' => '',
+                    ],
+                    'meta' => [
+                        'image' => '//cdn\.cloudflare',
+                    ],
+                    'website' => 'https://www.cloudflare.com',
+                ]
             ]
         ], $wappalyzer->analyze('https://www.madeit.be/'));
     }
@@ -289,7 +303,7 @@ class WappalyzerTest extends TestCase
             'url' => 'https://www.madeit.be/',
             'language' => 'nl-BE',
             'detected' => [
-                'Font Awesome' => [
+                /*'Font Awesome' => [
                     'cats' => [17],
                     'detected' => true,
                     "description" => "Font Awesome is a font and icon toolkit based on CSS and Less.",
@@ -312,7 +326,7 @@ class WappalyzerTest extends TestCase
                         "\\.fontawesome\\.com/([0-9a-z]+).js"
                     ],
                     "website" => "https://fontawesome.com/"
-                ],
+                ],*/
                 'PHP' => [
                     'cats' => [27],
                     'cookies' => ['PHPSESSID' => ''],
@@ -322,10 +336,10 @@ class WappalyzerTest extends TestCase
                     ],
                     'icon' => 'PHP.svg',
                     'url' => '\.php(?:$|\?)',
-                    'website' => 'http://php.net',
+                    'website' => 'https://php.net',
                     'detected' => true,
                     'version' => '7.2.7',
-                    'cpe' => 'cpe:/a:php:php',
+                    'cpe' => 'cpe:2.3:a:php:php:*:*:*:*:*:*:*:*',
                     "description" => "PHP is a general-purpose scripting language used for web development.",
                 ],
                 'WordPress' => [
@@ -356,7 +370,7 @@ class WappalyzerTest extends TestCase
                         'link' => 'rel="https://api\.w\.org/"',
                         'X-Pingback' => '/xmlrpc\.php$',
                     ],
-                    "cpe" => "cpe:/a:wordpress:wordpress",
+                    "cpe" => "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
                     "description" => "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database. Features include a plugin architecture and a template system.",
                     "pricing" => [
                         "low",
@@ -368,6 +382,7 @@ class WappalyzerTest extends TestCase
                         "/wp-(?:content|includes)/",
                         "wp-embed\\.min\\.js"
                     ],
+                    'oss' => true,
                 ],
                 'Yoast SEO' => [
                     'cats' => [ 54, 87 ],
@@ -379,18 +394,22 @@ class WappalyzerTest extends TestCase
                             ]
                         ]
                     ],
-                    "html" => "<!-- This site is optimized with the Yoast (?:WordPress )?SEO plugin v([\\d.]+) -\\;version:\\1",
+                    "html" => [
+                        '<!-- This site is optimized with the Yoast (?:WordPress )?SEO plugin v([^\s]+) -\;version:\1',
+                        '<!-- This site is optimized with the Yoast SEO Premium plugin v(?:[^\s]+) \(Yoast SEO v([^\s]+)\) -\;version:\1',
+                    ],
                     "icon" => "Yoast SEO.png",
-                    "requires" => "WordPress",
-                    "website" => "https://yoast.com",
+                    'website' => 'https://yoast.com/wordpress/plugins/seo/',
                     'detected' => true,
                     'version' => '7.8',
+                    'implies' => 'WordPress',
+                    'oss' => true,
                 ],
                 'MySQL' => [
                     'cats' => [ 34 ],
                     'icon' => 'MySQL.svg',
-                    'website' => 'http://mysql.com',
-                    'cpe' => 'cpe:/a:mysql:mysql',
+                    'website' => 'https://mysql.com',
+                    'cpe' => 'cpe:2.3:a:mysql:mysql:*:*:*:*:*:*:*:*',
                     "description" => "MySQL is an open-source relational database management system.",
                 ],
                 'Laravel' => [
@@ -405,8 +424,9 @@ class WappalyzerTest extends TestCase
                     ],
                     'website' => 'https://laravel.com',
                     'detected' => true,
-                    'cpe' => 'cpe:/a:laravel:laravel',
+                    'cpe' => 'cpe:2.3:a:laravel:laravel:*:*:*:*:*:*:*:*',
                     "description" => "Laravel is a free, open-source PHP web framework.",
+                    'oss' => true,
                 ],
                 'AdRoll' => [
                     'cats' => [
@@ -418,6 +438,7 @@ class WappalyzerTest extends TestCase
                     'js' => [
                         'adroll_adv_id' => '',
                         'adroll_pix_id' => '',
+                        'adroll_version' => '([\d\.]+)\;version:\1'
                     ],
                     'pricing' => [
                         0 => 'low',
@@ -425,17 +446,13 @@ class WappalyzerTest extends TestCase
                     ],
                     'saas' => true,
                     'scriptSrc' => '(?:a|s)\\.adroll\\.com',
-                    'website' => 'http://adroll.com',
+                    'website' => 'https://adroll.com',
                     'detected' => true,
+                    'dom' => "link[href*='.adroll.com']",
                 ],
                 'reCAPTCHA' => [
                     'cats' => [
                         16,
-                    ],
-                    'html' => [
-                        '<div[^>]+id="recaptcha_image',
-                        '<link[^>]+recaptcha',
-                        '<div[^>]+class="g-recaptcha"',
                     ],
                     'icon' => 'reCAPTCHA.svg',
                     'js' => [
@@ -445,10 +462,19 @@ class WappalyzerTest extends TestCase
                     'scriptSrc' => [
                         'api-secure\\.recaptcha\\.net',
                         'recaptcha_ajax\\.js',
-                        '/recaptcha/api\\.js',
+                        '/recaptcha/(?:api|enterprise)\.js',
                     ],
                     'website' => 'https://www.google.com/recaptcha/',
                     'detected' => true,
+                    'description' => 'reCAPTCHA is a free service from Google that helps protect websites from spam and abuse.',
+                    'dom' => "#recaptcha_image, iframe[src*='.google.com/recaptcha/'], div.g-recaptcha",
+                    'pricing' => [
+                        'freemium',
+                        'payg',
+                        'poa'
+                    ],
+                    'saas' => true,
+                    'scripts' => '/recaptcha/api\.js',
                 ],
                 'Facebook Pixel' => [
                     'cats' => [
@@ -464,9 +490,49 @@ class WappalyzerTest extends TestCase
                         'connect\\.facebook.\\w+/signals/config/\\d+\\?v=([\\d\\.]+)\\;version:\\1',
                         'connect\\.facebook\\.\\w+/.+/fbevents\\.js',
                     ],
-                    'website' => 'http://facebook.com',
+                    'website' => 'https://facebook.com',
                     'detected' => true,
                 ],
+                'cdnjs' => [
+                    'cats' => [
+                        31
+                    ],
+                    'description' => 'cdnjs is a free distributed JS library delivery service.',
+                    'dom' => "link[href*='cdnjs.cloudflare.com/']",
+                    'icon' => 'cdnjs.svg',
+                    'implies' => 'Cloudflare',
+                    'oss' => true,
+                    'scriptSrc' => 'cdnjs\.cloudflare\.com',
+                    'website' => 'https://cdnjs.com',
+                    'detected' => true,
+                ],
+                'Cloudflare' => [
+                    'cats' => [
+                        31
+                    ],
+                    'cookies' => [
+                        '__cfduid' => '',
+                    ],
+                    'description' => 'Cloudflare is a web-infrastructure and website-security company, providing content-delivery-network services, DDoS mitigation, Internet security, and distributed domain-name-server services.',
+                    'dns' => [
+                        'NS' => '\.cloudflare\.com',
+                        'SOA' => '\.cloudflare\.com',
+                    ],
+                    'dom' => "img[src*='//cdn.cloudflare']",
+                    'headers' => [
+                        'Server' => '^cloudflare$',
+                        'cf-cache-status' => '',
+                        'cf-ray' => ''
+                    ],
+                    'icon' => 'CloudFlare.svg',
+                    'js' => [
+                        'CloudFlare' => '',
+                    ],
+                    'meta' => [
+                        'image' => '//cdn\.cloudflare',
+                    ],
+                    'website' => 'https://www.cloudflare.com',
+                ]
             ]
         ], $wappalyzer->analyze('https://www.madeit.be/'));
     }

@@ -526,6 +526,9 @@ class Wappalyzer
             foreach ($pattern as $selector) {
                 try {
                     // Handle malformed expressions
+                    if(is_array($selector)) {
+                        continue;
+                    }
                     $results = $crawler->filter($selector);
                 } catch (Exception $e) {
                     continue;

@@ -7,7 +7,7 @@
     "icon": "ZK.png",
     "implies": "Java",
     "scriptSrc": "zkau/",
-    "website": "http://zkoss.org"
+    "website": "https://zkoss.org"
   },
   "ZURB Foundation": {
     "cats": [
@@ -22,65 +22,13 @@
     "js": {
       "Foundation.version": "([\\d.]+)\\;version:\\1"
     },
-    "website": "http://foundation.zurb.com"
-  },
-  "Zakeke": {
-    "cats": [
-      76
-    ],
-    "description": "Zakeke is a product customisation tool compatible with services and apps mostly used to manage ecommerce store.",
-    "icon": "Zakeke.png",
-    "js": {
-      "zakekeBoot": "",
-      "zakekeLoading": "",
-      "zakekeProductPage": "",
-      "zakekeCustomizeLabel": ""
-    },
-    "saas": true,
-    "pricing": [
-      "recurring",
-      "low"
-    ],
-    "website": "https://www.zakeke.com"
-  },
-  "Zakeke Interactive Product Designer": {
-    "cats": [
-      87,
-      76
-    ],
-    "description": "Zakeke Interactive Product Designer lets customers personalise any product and visualise how they’ll look before checking out.",
-    "icon": "Zakeke.png",
-    "requires": "WooCommerce",
-    "implies": "Zakeke",
-    "scriptSrc": "/wp-content/plugins/zakeke-interactive-product-designer/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
-    "saas": true,
-    "pricing": [
-      "recurring",
-      "low"
-    ],
-    "website": "https://www.zakeke.com"
-  },
-  "Zakeke Visual Customizer": {
-    "cats": [
-      100,
-      76
-    ],
-    "description": "Zakeke Visual Customizer is a cloud-connected visual ecommerce tool that allows brands and retailers to offer live, personalised, 2D, 3D, and augmented reality (AR) functionality for their products.",
-    "icon": "Zakeke.png",
-    "requires": "Shopify",
-    "implies": "Zakeke",
-    "scriptSrc": "\\.zakeke\\.com/Scripts/integration/shopify/",
-    "saas": true,
-    "pricing": [
-      "recurring",
-      "low"
-    ],
-    "website": "https://www.zakeke.com"
+    "website": "https://foundation.zurb.com"
   },
   "Zabbix": {
     "cats": [
       19
     ],
+    "cpe": "cpe:2.3:a:zabbix:zabbix:*:*:*:*:*:*:*:*",
     "html": "<body[^>]+zbxCallPostScripts",
     "icon": "Zabbix.png",
     "implies": "PHP",
@@ -91,7 +39,60 @@
       "Author": "ZABBIX SIA\\;confidence:70"
     },
     "url": "\\/zabbix\\/\\;confidence:30",
-    "website": "http://zabbix.com"
+    "website": "https://zabbix.com"
+  },
+  "Zakeke": {
+    "cats": [
+      76
+    ],
+    "description": "Zakeke is a product customisation tool compatible with services and apps mostly used to manage ecommerce store.",
+    "icon": "Zakeke.png",
+    "js": {
+      "zakekeBoot": "",
+      "zakekeCustomizeLabel": "",
+      "zakekeLoading": "",
+      "zakekeProductPage": ""
+    },
+    "pricing": [
+      "recurring",
+      "low"
+    ],
+    "saas": true,
+    "website": "https://www.zakeke.com"
+  },
+  "Zakeke Interactive Product Designer": {
+    "cats": [
+      87,
+      76
+    ],
+    "description": "Zakeke Interactive Product Designer lets customers personalise any product and visualise how they’ll look before checking out.",
+    "icon": "Zakeke.png",
+    "implies": "Zakeke",
+    "pricing": [
+      "recurring",
+      "low"
+    ],
+    "requires": "WooCommerce",
+    "saas": true,
+    "scriptSrc": "/wp-content/plugins/zakeke-interactive-product-designer/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
+    "website": "https://www.zakeke.com"
+  },
+  "Zakeke Visual Customizer": {
+    "cats": [
+      100,
+      76
+    ],
+    "description": "Zakeke Visual Customizer is a cloud-connected visual ecommerce tool that allows brands and retailers to offer live, personalised, 2D, 3D, and augmented reality (AR) functionality for their products.",
+    "icon": "Zakeke.png",
+    "implies": "Zakeke",
+    "pricing": [
+      "recurring",
+      "low"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "\\.zakeke\\.com/Scripts/integration/shopify/",
+    "website": "https://www.zakeke.com"
   },
   "Zakra": {
     "cats": [
@@ -124,23 +125,37 @@
       "zanox": ""
     },
     "scriptSrc": "zanox\\.com/scripts/zanox\\.js$",
-    "website": "http://zanox.com"
+    "website": "https://zanox.com"
   },
-  "Zaraz": {
+  "Zeabur": {
     "cats": [
-      92
+      62
     ],
-    "description": "Zaraz allows most tools to send their information through the Zaraz backend, replacing multiple network requests with a single request. Zaraz replaces heavy third-party widgets with a lighter-weight version that loads first so that the full-featured tool loads only when the browser reaches interactivity or upon user interaction.",
-    "icon": "Zaraz.svg",
-    "js": {
-      "zaraz": "",
-      "zarazData": ""
+    "description": "Zeabur is a platform for running full stack apps and databases.",
+    "headers": {
+      "X-Zeabur-Request-Id": ""
     },
+    "icon": "zeabur.svg",
+    "pricing": [
+      "freemium",
+      "payg"
+    ],
+    "website": "https://zeabur.com"
+  },
+  "Zeald": {
+    "cats": [
+      6
+    ],
+    "cookies": {
+      "ZES_BACKEND": "zeald"
+    },
+    "description": "Zeald is a full-service website design and digital marketing company.",
+    "icon": "Zeald.png",
     "pricing": [
       "poa"
     ],
-    "saas": true,
-    "website": "https://zaraz.com"
+    "requires": "Cart Functionality",
+    "website": "https://www.zeald.com"
   },
   "Zeleris": {
     "cats": [
@@ -161,7 +176,7 @@
     "meta": {
       "generator": "Zen Cart"
     },
-    "website": "http://www.zen-cart.com"
+    "website": "https://www.zen-cart.com"
   },
   "Zend": {
     "cats": [
@@ -170,11 +185,12 @@
     "cookies": {
       "ZENDSERVERSESSID": ""
     },
+    "cpe": "cpe:2.3:a:zend:zend_server:*:*:*:*:*:*:*:*",
     "headers": {
       "X-Powered-By": "Zend(?:Server)?(?:[\\s/]?([0-9.]+))?\\;version:\\1"
     },
     "icon": "Zend.png",
-    "website": "http://zend.com"
+    "website": "https://zend.com"
   },
   "Zendesk": {
     "cats": [
@@ -196,7 +212,7 @@
     "headers": {
       "x-zendesk-user-id": ""
     },
-    "icon": "Zendesk.png",
+    "icon": "Zendesk.svg",
     "js": {
       "Zendesk": ""
     },
@@ -219,7 +235,22 @@
     ],
     "saas": true,
     "scriptSrc": "v2\\.zopim\\.com",
-    "website": "http://zopim.com"
+    "website": "https://zopim.com"
+  },
+  "Zendesk Sunshine Conversations": {
+    "cats": [
+      52
+    ],
+    "description": "Zendesk Sunshine Conversations lets you share a single, continuous conversation with every team in your business. With a unified API and native connectors to popular business applications like Zendesk and Slack, everyone in your organization can get access to a single view of the customer conversation.",
+    "icon": "Zendesk.svg",
+    "implies": "Zendesk",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.smooch\\.io/",
+    "website": "https://www.zendesk.com/platform/conversations"
   },
   "Zenfolio": {
     "cats": [
@@ -255,7 +286,7 @@
       "Zepto": ""
     },
     "scriptSrc": "zepto.*\\.js",
-    "website": "http://zeptojs.com"
+    "website": "https://zeptojs.com"
   },
   "ZestMoney": {
     "cats": [
@@ -274,6 +305,58 @@
     "saas": true,
     "website": "https://www.zestmoney.in"
   },
+  "Zeus Technology": {
+    "cats": [
+      36
+    ],
+    "description": "Zeus Technology is a media monetisation platform that levels the playing field for publishers and advertisers of all sizes.",
+    "icon": "Zeus Technology.svg",
+    "js": {
+      "zeus.version": "v([\\d\\.]+)\\;version:\\1",
+      "zeusAdUnitPath": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.zeustechnology.com"
+  },
+  "Zid": {
+    "cats": [
+      6
+    ],
+    "cookies": {
+      "zid_catalog_session": ""
+    },
+    "description": "Zid is an ecommerce SaaS that allows merchants to build and manage their online stores.",
+    "icon": "Zid.png",
+    "js": {
+      "zid.store": "",
+      "zidTracking.sendGaProductRemoveFromCartEvent": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://zid.sa"
+  },
+  "Ziggy": {
+    "cats": [
+      59
+    ],
+    "description": "Ziggy is a library that allows using Laravel named routes in JavaScript.",
+    "icon": "Ziggy.png",
+    "implies": [
+      "Laravel",
+      "Inertia.js"
+    ],
+    "js": {
+      "Ziggy": ""
+    },
+    "oss": true,
+    "website": "https://github.com/tighten/ziggy"
+  },
   "Zimbra": {
     "cats": [
       30
@@ -281,6 +364,7 @@
     "cookies": {
       "ZM_TEST": "true"
     },
+    "cpe": "cpe:2.3:a:zimbra:zimbra:*:*:*:*:*:*:*:*",
     "icon": "Zimbra.png",
     "implies": "Java",
     "website": "https://www.zimbra.com/"
@@ -296,7 +380,7 @@
     },
     "oss": true,
     "pricing": [
-      "freemium",
+      "recurring",
       "mid"
     ],
     "saas": true,
@@ -312,7 +396,7 @@
     "meta": {
       "generator": "Zinnia"
     },
-    "website": "http://django-blog-zinnia.com"
+    "website": "https://django-blog-zinnia.com"
   },
   "Zinrelo": {
     "cats": [
@@ -351,6 +435,38 @@
       "zip\\.co"
     ],
     "website": "https://www.zip.co/"
+  },
+  "Zipify OCU": {
+    "cats": [
+      100
+    ],
+    "description": "Zipify OCU allows you to add upsells and cross-sells to your checkout sequence.",
+    "icon": "Zipify OCU.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "/zipify-oneclickupsell-vendor\\.js",
+    "website": "https://zipify.com/apps/ocu/"
+  },
+  "Zipify Pages": {
+    "cats": [
+      100,
+      51
+    ],
+    "description": "Zipify Pages the first landing page builder uniquely designed for ecommerce.",
+    "icon": "Zipify Pages.svg",
+    "implies": "Shopify",
+    "js": {
+      "ZipifyPages": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://zipify.com/apps/pages/"
   },
   "Zipkin": {
     "cats": [
@@ -493,6 +609,7 @@
     "cats": [
       12
     ],
+    "icon": "Angular.svg",
     "implies": "Angular",
     "js": {
       "Zone.root": ""
@@ -501,7 +618,7 @@
   },
   "Zonos": {
     "cats": [
-      6
+      106
     ],
     "description": "Zonos is a cross-border ecommerce software and app solution for companies with international business.",
     "icon": "Zonos.svg",
@@ -558,7 +675,23 @@
       "Server": "^Zope/"
     },
     "icon": "Zope.png",
-    "website": "http://zope.org"
+    "website": "https://zope.org"
+  },
+  "Zotabox": {
+    "cats": [
+      32
+    ],
+    "description": "Zotabox is marketing tool which includes popups, header bars, page/form builder, testimonial, live chat, etc.",
+    "icon": "zotabox.png",
+    "js": {
+      "Zotabox": "",
+      "Zotabox_Init": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "website": "https://info.zotabox.com"
   },
   "Zozo": {
     "cats": [
@@ -579,28 +712,20 @@
     "meta": {
       "generator": "Zozo Ecommerce"
     },
-    "scriptSrc": [
-      "catalog/view/theme/[^\"]+/javascript/common\\.js",
-      "zozo-main\\.min\\.js"
-    ],
+    "scriptSrc": "zozo-main\\.min\\.js",
     "website": "https://zozo.vn"
   },
-  "Zyro": {
+  "Zuppler": {
     "cats": [
-      51
+      93
     ],
-    "description": "Zyro is a website builder service by the Hostinger group.",
-    "icon": "Zyro.svg",
-    "implies": "Vue.js",
-    "meta": {
-      "generator": "^Zyro\\.com Website Builder$"
-    },
+    "description": "Zuppler is a complete and branded online ordering solution for restaurants and caterers with multi-locations.",
+    "dom": "link[href*='.zuppler.com/']",
+    "icon": "Zuppler.png",
     "pricing": [
-      "low",
-      "recurring"
+      "payg"
     ],
     "saas": true,
-    "scriptSrc": "userapp\\.zyrosite\\.com/",
-    "website": "https://zyro.com"
+    "website": "https://www.zuppler.com"
   }
 }

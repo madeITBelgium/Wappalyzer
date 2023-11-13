@@ -10,7 +10,7 @@
     "meta": {
       "generator": "RBS Change"
     },
-    "website": "http://www.rbschange.fr"
+    "website": "https://www.rbschange.fr"
   },
   "RCMS": {
     "cats": [
@@ -20,7 +20,7 @@
     "meta": {
       "generator": "^(?:RCMS|ReallyCMS)"
     },
-    "website": "http://www.rcms.fi"
+    "website": "https://www.rcms.fi"
   },
   "RD Station": {
     "cats": [
@@ -32,13 +32,13 @@
       "RDStation": ""
     },
     "scriptSrc": "d335luupugsy2\\.cloudfront\\.net/js/loader-scripts/.*-loader\\.js",
-    "website": "http://rdstation.com.br"
+    "website": "https://rdstation.com.br"
   },
   "RDoc": {
     "cats": [
       4
     ],
-    "cpe": "cpe:/a:dave_thomas:rdoc",
+    "cpe": "cpe:2.3:a:dave_thomas:rdoc:*:*:*:*:*:*:*:*",
     "description": "RDoc produces HTML and command-line documentation for Ruby projects.",
     "html": [
       "<link[^>]+href=\"[^\"]*rdoc-style\\.css",
@@ -63,9 +63,6 @@
       "redaxo": "\\;confidence:50"
     },
     "oss": true,
-    "pricing": [
-      "freemium"
-    ],
     "url": "^https?://(?:www\\.)?[\\d\\w\\-]+\\.[\\w]+/redaxo/\\;confidence:50",
     "website": "https://redaxo.org"
   },
@@ -83,6 +80,39 @@
       "recurring"
     ],
     "website": "https://www.reg.ru"
+  },
+  "RND": {
+    "cats": [
+      6
+    ],
+    "description": "RND is a software technology used for companies to set up ecommerce infrastructure.",
+    "dom": "div#rnd-mobile-menu, a[href*='www.rnd.com.tr/?utm_source='][target='_blank']",
+    "icon": "RND.png",
+    "pricing": [
+      "recurring"
+    ],
+    "requires": [
+      "Microsoft ASP.NET",
+      "New Relic"
+    ],
+    "saas": true,
+    "scriptSrc": "/Scripts/plugins/rnd-mobilemenu/",
+    "website": "https://www.rnd.com.tr/en/"
+  },
+  "RSS": {
+    "cats": [
+      19
+    ],
+    "description": "RSS is a family of web feed formats used to publish frequently updated works—such as blog entries, news headlines, audio, and video—in a standardized format.",
+    "dom": {
+      "link[type*='application']": {
+        "attributes": {
+          "type": "application/(?:rss|atom)\\+xml"
+        }
+      }
+    },
+    "icon": "RSS.svg",
+    "website": "https://www.rssboard.org/rss-specification"
   },
   "RTB House": {
     "cats": [
@@ -105,7 +135,7 @@
       "X-Powered-By": "RX-WEB"
     },
     "icon": "RXWeb.svg",
-    "website": "http://developers.rokitax.co.uk/projects/rxweb"
+    "website": "https://developers.rokitax.co.uk/projects/rxweb"
   },
   "RackCache": {
     "cats": [
@@ -118,6 +148,50 @@
     "icon": "RackCache.png",
     "implies": "Ruby",
     "website": "https://github.com/rtomayko/rack-cache"
+  },
+  "Radix UI": {
+    "cats": [
+      66
+    ],
+    "css": [
+      "--radix-accordion-content-height",
+      "--radix-toast-swipe-end-x",
+      "--radix-toast-swipe-move-x",
+      "--radix-navigation-menu-viewport-width",
+      "--radix-navigation-menu-viewport-height",
+      "--radix-select-trigger-width",
+      "--radix-select-trigger-height",
+      "--radix-context-menu-content-transform-origin",
+      "--radix-context-menu-content-available-height",
+      "--radix-dropdown-menu-content-available-height",
+      "--radix-dropdown-menu-content-transform-origin",
+      "--radix-hover-card-content-transform-origin",
+      "--radix-popover-trigger-width",
+      "--radix-popover-content-transform-origin",
+      "--radix-select-trigger-width",
+      "--radix-select-content-available-height",
+      "--radix-select-content-transform-origin",
+      "--radix-tooltip-content-transform-origin"
+    ],
+    "description": "Radix UI is a React-based user interface component library that offers accessible, responsive, and customisable components for building web applications.",
+    "dom": "a[data-radix-collection-item], button[data-radix-collection-item]",
+    "icon": "Radix UI.svg",
+    "oss": true,
+    "requires": "React",
+    "website": "https://www.radix-ui.com"
+  },
+  "Rain": {
+    "cats": [
+      6
+    ],
+    "description": "Rain is a cloud-based point of sale (POS) system for small to midsized retailers.",
+    "icon": "Rain.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.rainpos\\.com/",
+    "website": "https://www.rainpos.com"
   },
   "RainLoop": {
     "cats": [
@@ -142,6 +216,41 @@
     "scriptSrc": "^rainloop/v/([0-9.]+)/\\;version:\\1",
     "website": "https://www.rainloop.net/"
   },
+  "RaiseDonors": {
+    "cats": [
+      111
+    ],
+    "description": "RaiseDonors is for anyone raising money and cultivating donor relationships online.",
+    "dom": "a[href*='//raisedonors.com/'][target='_blank']",
+    "icon": "RaiseDonors.png",
+    "meta": {
+      "author": "^RaiseDonors$"
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://explore.raisedonors.com"
+  },
+  "Raisely": {
+    "cats": [
+      111
+    ],
+    "description": "Raisely is a cloud-based fundraising platform that helps non-profits and charities drive fundraising campaigns and collect donations.",
+    "icon": "Raisely.svg",
+    "js": {
+      "RaiselyComponents": "",
+      "__raiselyDebug": "",
+      "wpRaisely": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://raisely.com"
+  },
   "Rakuten": {
     "cats": [
       71
@@ -155,7 +264,10 @@
       "rakutenRanMID": "",
       "rakutenSource": ""
     },
-    "scriptSrc": "tag\\.rmp\\.rakuten\\.com",
+    "scriptSrc": [
+      "tag\\.rmp\\.rakuten\\.com",
+      "\\.linksynergy\\.com"
+    ],
     "website": "https://www.rakuten.com/"
   },
   "Rakuten Advertising": {
@@ -182,15 +294,15 @@
     ],
     "icon": "Ramda.png",
     "scriptSrc": "ramda.*\\.js",
-    "website": "http://ramdajs.com"
+    "website": "https://ramdajs.com"
   },
   "RankMath SEO": {
     "cats": [
       87,
       54
     ],
-    "description": "RankMath SEO is a search engine optimization plugin for WordPress.",
-    "dom": "link[href*='/wp-content/plugins/seo-by-rank-math/']",
+    "description": "RankMath SEO is a search engine optimisation plugin for WordPress.",
+    "dom": "link[href*='/wp-content/plugins/seo-by-rank-math/'], script.rank-math-schema-pro, script.rank-math-schema",
     "icon": "RankMath SEO.svg",
     "pricing": [
       "freemium",
@@ -283,6 +395,40 @@
     "icon": "Raspbian.svg",
     "website": "https://www.raspbian.org/"
   },
+  "RateParity": {
+    "cats": [
+      5
+    ],
+    "description": "RateParity is a conversion rate optimisation platform for hotels.",
+    "icon": "RateParity.svg",
+    "pricing": [
+      "recurring",
+      "mid"
+    ],
+    "saas": true,
+    "scriptSrc": "code\\.rateparity\\.com/",
+    "website": "https://www.rateparity.com"
+  },
+  "Rawabit": {
+    "cats": [
+      51
+    ],
+    "cookies": {
+      "rawabit_session": ""
+    },
+    "description": "Rawabit is a website builder that lets small businesses design landing pages, modify sections, and embed content links using a drag and drop editor.",
+    "icon": "Rawabit.svg",
+    "meta": {
+      "powered-by": "^Rawabit$"
+    },
+    "pricing": [
+      "freemium",
+      "recurring",
+      "low"
+    ],
+    "saas": true,
+    "website": "https://www.rawabit.me"
+  },
   "Raychat": {
     "cats": [
       52
@@ -330,7 +476,7 @@
     "meta": {
       "generator": "^Rayo"
     },
-    "website": "http://www.rayo.ir"
+    "website": "https://www.rayo.ir"
   },
   "Razorpay": {
     "cats": [
@@ -378,6 +524,23 @@
     "scriptSrc": "/wp-content/plugins/wpcf7-recaptcha/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
     "website": "https://wordpress.org/plugins/wpcf7-recaptcha/"
   },
+  "ReConvert": {
+    "cats": [
+      100
+    ],
+    "description": "ReConvert is a post-purchase upsell & thank you page.",
+    "icon": "ReConvert.svg",
+    "implies": "Shopify",
+    "pricing": [
+      "low",
+      "payg",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.stilyoapps\\.com/reconvert/assets/js/store_reconvert_node\\.js",
+    "website": "https://www.reconvert.io"
+  },
   "ReDoc": {
     "cats": [
       4
@@ -396,35 +559,63 @@
     "cats": [
       12
     ],
-    "cpe": "cpe:/a:facebook:react",
+    "cpe": "cpe:2.3:a:facebook:react:*:*:*:*:*:*:*:*",
     "description": "React is an open-source JavaScript library for building user interfaces or UI components.",
     "dom": {
       "body > div": {
         "properties": {
           "_reactRootContainer": ""
         }
+      },
+      "div[id*='react-root'], span[id*='react-']": {
+        "exists": ""
       }
     },
     "html": "<[^>]+data-react",
-    "icon": "React.png",
+    "icon": "React.svg",
     "js": {
-      "React.version": "^(.+)$\\;version:\\1",
+      "React.version": "^([\\d\\.]+)$\\;version:\\1",
       "ReactOnRails": "",
       "__REACT_ON_RAILS_EVENT_HANDLERS_RAN_ONCE__": ""
     },
+    "meta": {
+      "description": "^Web site created using create-react-app$"
+    },
     "scriptSrc": [
-      "react(?:-with-addons)?[.-]([\\d.]*\\d)[^/]*\\.js\\;version:\\1",
-      "/([\\d.]+)/react(?:\\.min)?\\.js\\;version:\\1",
+      "react(?:-with-addons)?[.-](\\d+(?:\\.\\d+)+)[^/]*\\.js\\;version:\\1",
+      "/([\\d\\.]+)/react(?:\\.min)?\\.js\\;version:\\1",
       "^react\\b.*\\.js"
     ],
     "website": "https://reactjs.org"
+  },
+  "React Bricks": {
+    "cats": [
+      1
+    ],
+    "description": "React Bricks is a visual editing CMS based on React components.",
+    "dom": {
+      "img[src*='react']": {
+        "attributes": {
+          "src": "react(?:-)?bricks\\."
+        }
+      }
+    },
+    "icon": "React Bricks.svg",
+    "implies": "React",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "requires": "React",
+    "saas": true,
+    "website": "https://reactbricks.com"
   },
   "React Redux": {
     "cats": [
       12
     ],
-    "description": "Official React bindings for Redux",
-    "icon": "Redux.png",
+    "description": "React Redux is the official React binding for Redux.",
+    "icon": "Redux.svg",
     "implies": [
       "React",
       "Redux"
@@ -439,12 +630,99 @@
       12
     ],
     "description": "React Router provides declarative routing for React.",
-    "icon": "React Router.png",
+    "icon": "React Router.svg",
     "implies": "React",
+    "oss": true,
     "scriptSrc": [
-      "/react-router(@|/)([\\d.]+)(?:/[a-z]+)?/react-router(?:.min)?\\.js\\;version:\\2"
+      "(?:/react-router(@|/)([\\d.]+)(?:/[a-z]+)?)?/react-router(?:\\.min)?\\.js\\;version:\\2"
     ],
-    "website": "https://reactrouter.com/"
+    "website": "https://reactrouter.com"
+  },
+  "Reactive": {
+    "cats": [
+      1,
+      6
+    ],
+    "description": "Reactive is a subscription-based software that allows you to set up an online store and website. It has a CMS and has been created to support retail, coffee bars, restaurants owners and accomodation properties such as hotels or villas. With Reactive one can sell products or accept reservations and online orders.",
+    "icon": "Reactive.svg",
+    "implies": [
+      "Ruby on Rails"
+    ],
+    "meta": {
+      "generator": "Reactive"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "url": "^https?//.+\\.reactiveonline\\.io",
+    "website": "https://reactiveonline.io"
+  },
+  "ReadAloud": {
+    "cats": [
+      5
+    ],
+    "description": "The SiteSpeaker text-to-speech widget is embedded into your posts and give users an alternate way to consume your content as audio.",
+    "dom": "div#ra-player, div[data-skin*='assets\\.sitespeaker\\.link/embed/skins']",
+    "icon": "default.svg",
+    "website": "https://www.readaloudwidget.com",
+    "xhr": "assets\\.sitespeaker\\.link"
+  },
+  "ReadMe": {
+    "cats": [
+      4,
+      1
+    ],
+    "description": "ReadMe is a content management system that businesses use to create and manage technical or API documentation.",
+    "icon": "readme.svg",
+    "meta": {
+      "readme-deploy": "^[\\d\\.]+$",
+      "readme-version": "^[\\d\\.]+$"
+    },
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "scriptSrc": "/cdn\\.readme\\.io/js/",
+    "website": "https://readme.com"
+  },
+  "ReadSpeaker": {
+    "cats": [
+      5
+    ],
+    "description": "ReadSpeaker is an intuitive text-to-speech API that converts text into natural-sounding audio files for websites and applications.",
+    "icon": "ReadSpeaker.svg",
+    "js": {
+      "ReadSpeaker": "",
+      "ReadSpeaker.meta.version": "^([\\d\\.]+)_.+$\\;version:\\1"
+    },
+    "pricing": [
+      "poa",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.readspeaker\\.com/",
+    "website": "https://www.readspeaker.com"
+  },
+  "Readymag": {
+    "cats": [
+      51
+    ],
+    "description": "Readymag is a browser-based design tool that helps create websites, portfolios and all kinds of online publications without coding.",
+    "icon": "Readymag.svg",
+    "meta": {
+      "generator": "^Readymag$"
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://readymag.com"
   },
   "Really Simple CAPTCHA": {
     "cats": [
@@ -454,9 +732,6 @@
     "dom": "img[src*='/wp-content/plugins/really-simple-captcha/']",
     "icon": "Really Simple CAPTCHA.png",
     "oss": true,
-    "pricing": [
-      "freemium"
-    ],
     "requires": "WordPress",
     "website": "https://wordpress.org/plugins/really-simple-captcha"
   },
@@ -474,7 +749,8 @@
   },
   "Rebuy": {
     "cats": [
-      76
+      76,
+      100
     ],
     "description": "Rebuy offers personlisation solutions for ecommerce sites.",
     "icon": "Rebuy.png",
@@ -556,9 +832,27 @@
     ],
     "saas": true,
     "scriptSrc": [
-      "rechargeassets-bootstrapheroes-rechargeapps\\.netdna-ssl\\.com"
+      "rechargeassets-bootstrapheroes-rechargeapps\\.netdna-ssl\\.com",
+      "\\.rechargecdn\\.com/"
     ],
-    "website": "https://rechargepayments.com/"
+    "website": "https://rechargepayments.com"
+  },
+  "Recharts": {
+    "cats": [
+      25
+    ],
+    "description": "Recharts is a component-based charting library, which is exclusively built for React applications.",
+    "dom": {
+      "div > div > svg.recharts-surface": {
+        "attributes": {
+          "class": ""
+        }
+      }
+    },
+    "icon": "Recharts.svg",
+    "implies": "React",
+    "oss": true,
+    "website": "https://recharts.org/"
   },
   "Recite Me": {
     "cats": [
@@ -569,13 +863,29 @@
     "scriptSrc": "api\\.reciteme\\.com/asset/js",
     "website": "https://reciteme.com/"
   },
+  "Recomify": {
+    "cats": [
+      100
+    ],
+    "description": "Recomify is a 1-click install, cost-effective smart product recommendation engine.",
+    "icon": "Recomify.png",
+    "implies": "Shopify",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "app\\.recomify\\.com/",
+    "website": "https://www.recomify.com"
+  },
   "RecoverMyCart": {
     "cats": [
       76,
       100
     ],
-    "description": "RecoverMyCart is a shopify app for abandoned basket recovery.",
+    "description": "RecoverMyCart is a Shopify app for abandoned basket recovery.",
     "icon": "RecoverMyCart.png",
+    "implies": "Shopify",
     "pricing": [
       "low",
       "freemium",
@@ -587,20 +897,42 @@
   },
   "Recruitee": {
     "cats": [
-     101
+      101
     ],
     "description": "Recruitee is an integrated cloud-based recruitment management and applicant tracking system.",
-    "icon": "Recruitee.svg",
     "dom": "a[href*='.recruitee.com']",
+    "icon": "Recruitee.svg",
     "js": {
       "RtApp.mapBoxToken": ""
     },
-    "saas": true,
     "pricing": [
       "mid",
       "recurring"
     ],
+    "saas": true,
     "website": "https://recruitee.com"
+  },
+  "Recurate": {
+    "cats": [
+      19
+    ],
+    "description": "Recurate is a tech-enabled resale service that empowers brands & retailers to establish their own integrated resale platforms directly on their ecommerce sites.",
+    "dom": {
+      "a[href*='support@recurate.com']": {
+        "attributes": {
+          "href": "mailto\\:support\\@recurate\\.com"
+        }
+      },
+      "link[href*='/recurate-site.css']": {
+        "attributes": {
+          "href": "cdn\\.shopify\\.com/.+/recurate-site\\.css"
+        }
+      }
+    },
+    "icon": "Recurate.svg",
+    "requires": "Shopify",
+    "scripts": "\"(?:vendor|title)?\"\\:\"Recurate\"",
+    "website": "https://www.recurate.com"
   },
   "Recurly": {
     "cats": [
@@ -619,7 +951,7 @@
     "cats": [
       28
     ],
-    "cpe": "cpe:/o:redhat:linux",
+    "cpe": "cpe:2.3:o:redhat:linux:*:*:*:*:*:*:*:*",
     "description": "Red Hat is an open-source Linux operating system.",
     "headers": {
       "Server": "Red Hat",
@@ -627,6 +959,15 @@
     },
     "icon": "Red Hat.svg",
     "website": "https://www.redhat.com"
+  },
+  "Red Hat Gluster": {
+    "cats": [
+      48
+    ],
+    "description": "Gluster is a free and open source scalable network filesystem.",
+    "icon": "gluster.png",
+    "saas": true,
+    "website": "https://www.gluster.org"
   },
   "Red je Pakketje": {
     "cats": [
@@ -659,25 +1000,46 @@
     "saas": true,
     "website": "https://redcart.pl"
   },
+  "RedShop": {
+    "cats": [
+      6
+    ],
+    "description": "RedShop provides a platform for SMEs to manage their ecommerce business.",
+    "dom": "link[href*='//redshop.s3.amazonaws.com/']",
+    "icon": "RedShop.png",
+    "implies": [
+      "Amazon S3",
+      "TypeScript",
+      "Next.js",
+      "React"
+    ],
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.redshop.io"
+  },
   "Reddit": {
     "cats": [
       2
     ],
     "html": "(?:<a[^>]+Powered by Reddit|powered by <a[^>]+>reddit<)",
-    "icon": "Reddit.png",
+    "icon": "Reddit.svg",
     "implies": "Python",
     "js": {
       "reddit": ""
     },
     "url": "^https?://(?:www\\.)?reddit\\.com",
-    "website": "http://code.reddit.com"
+    "website": "https://code.reddit.com"
   },
   "Reddit Ads": {
     "cats": [
       36
     ],
     "description": "Reddit Ads is an online advertising offering from Reddit.",
-    "icon": "Reddit.png",
+    "icon": "Reddit.svg",
     "scriptSrc": "www\\.redditstatic\\.com",
     "website": "https://advertising.reddithelp.com/"
   },
@@ -685,7 +1047,7 @@
     "cats": [
       34
     ],
-    "cpe": "cpe:/a:redislabs:redis",
+    "cpe": "cpe:2.3:a:redislabs:redis:*:*:*:*:*:*:*:*",
     "description": "Redis is an in-memory data structure project implementing a distributed, in-memory key–value database with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indexes.",
     "icon": "Redis.svg",
     "website": "https://redis.io"
@@ -709,7 +1071,7 @@
     "cookies": {
       "_redmine_session": ""
     },
-    "cpe": "cpe:/a:redmine:redmine",
+    "cpe": "cpe:2.3:a:redmine:redmine:*:*:*:*:*:*:*:*",
     "description": "Redmine is a free and open-source, web-based project management and issue tracking tool.",
     "html": "Powered by <a href=\"[^>]+Redmine",
     "icon": "Redmine.png",
@@ -717,18 +1079,75 @@
     "meta": {
       "description": "Redmine"
     },
-    "website": "http://www.redmine.org"
+    "website": "https://www.redmine.org"
+  },
+  "Redonner": {
+    "cats": [
+      84
+    ],
+    "description": "This company promotes the collection and recycling of textiles by rewarding each donation of clothing made on its website with 'Re' points, allowing you to benefit from advantages and discounts at more than 70 partner brands.",
+    "icon": "Redonner.svg",
+    "scriptSrc": "\\.redonner\\.fr/",
+    "website": "https://www.redonner.fr"
   },
   "Redux": {
     "cats": [
       12
     ],
     "description": "Redux is a predictable state container for JavaScript applications.",
-    "icon": "Redux.png",
+    "icon": "Redux.svg",
     "scriptSrc": [
       "/redux(@|/)([\\d.]+)(?:/[a-z]+)?/redux(?:.min)?\\.js\\;version:\\2"
     ],
-    "website": "https://redux.js.org/"
+    "website": "https://redux.js.org"
+  },
+  "Redux Framework": {
+    "cats": [
+      87
+    ],
+    "description": "Redux Framework is a modular PHP library that allows developers to create customisable settings panels and controls for WordPress projects, providing a consistent user interface for managing options and settings.",
+    "icon": "Redux Framework.svg",
+    "meta": {
+      "framework": "Redux\\s([\\d\\.]+)\\;version:\\1",
+      "generator": "Redux\\s([\\d\\.]+)\\;version:\\1"
+    },
+    "oss": true,
+    "requires": "WordPress",
+    "website": "https://redux.io"
+  },
+  "RedwoodJS": {
+    "cats": [
+      12,
+      18
+    ],
+    "description": "RedwoodJS is a full-stack serverless web application framework built by Tom Preston Werner (co-founder of Github) et al.",
+    "dom": "div#redwood-app",
+    "icon": "RedwoodJS.svg",
+    "implies": [
+      "React",
+      "GraphQL",
+      "TypeScript"
+    ],
+    "oss": true,
+    "website": "https://redwoodjs.com"
+  },
+  "Reelevant": {
+    "cats": [
+      76
+    ],
+    "description": "Reelevant is a visual content platform that helps businesses to create on-demand content for their viewers in order to increase conversion rates.",
+    "headers": {
+      "Content-Security-Policy": "\\.reelevant\\.com"
+    },
+    "icon": "Reelevant.svg",
+    "js": {
+      "reel.companyId": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://try.reelevant.com"
   },
   "Reevoo": {
     "cats": [
@@ -737,11 +1156,17 @@
     "description": "Reevoo is a provider of UGC solutions like reviews.",
     "icon": "Reevoo.svg",
     "js": {
-      "ReevooApi": ""
+      "ReevooApi": "",
+      "reevooAccessCode": "",
+      "reevooLoader.tracking": "",
+      "reevooUrl": "\\.reevoo\\.com/"
     },
+    "pricing": [
+      "poa"
+    ],
     "saas": true,
-    "scriptSrc": "mark\\.reevoo\\.com",
-    "website": "https://www.reevoo.com/"
+    "scriptSrc": "\\.reevoo\\.com/",
+    "website": "https://www.reevoo.com"
   },
   "ReferralCandy": {
     "cats": [
@@ -784,7 +1209,7 @@
     ],
     "saas": true,
     "scriptSrc": "\\.refersion\\.com",
-    "website": "http://refersion.com"
+    "website": "https://refersion.com"
   },
   "Reflektion": {
     "cats": [
@@ -802,6 +1227,23 @@
     "saas": true,
     "scriptSrc": "\\.cloudfront\\.net/js/reflektion\\.js",
     "website": "https://reflektion.com"
+  },
+  "Refundid": {
+    "cats": [
+      102
+    ],
+    "description": "Refundid provides ecommerce customers instant refunds for their online returns.",
+    "dom": "a[href*='.refundid.com/']",
+    "icon": "Refundid.png",
+    "js": {
+      "launchRefundidPopup": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "requiresCategory": 6,
+    "saas": true,
+    "website": "https://refundid.com"
   },
   "Regiondo": {
     "cats": [
@@ -826,7 +1268,7 @@
     "js": {
       "reinvigorate": ""
     },
-    "website": "http://www.reinvigorate.net"
+    "website": "https://www.reinvigorate.net"
   },
   "Relais Colis": {
     "cats": [
@@ -839,6 +1281,38 @@
       "\\bRelais Colis\\b"
     ],
     "website": "https://www.relaiscolis.com"
+  },
+  "Relewise": {
+    "cats": [
+      76
+    ],
+    "description": "Relewise is a platform that uses personalisation technology to provide customised online experiences through personalised search and recommendations.",
+    "dom": "link[href*='api.relewise.com/']",
+    "icon": "Relewise.svg",
+    "js": {
+      "relewiseConfig": "",
+      "relewiseTracking": ""
+    },
+    "pricing": [
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://relewise.com"
+  },
+  "Remarkable Commerce": {
+    "cats": [
+      6
+    ],
+    "description": "Remarkable Commerce is a technology and services company which provides a ecommerce platform for mid-sized retailers.",
+    "icon": "Remarkable.png",
+    "js": {
+      "Remarkable.BasketItems": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://remarkable.net/"
   },
   "Remix": {
     "cats": [
@@ -856,17 +1330,111 @@
     "oss": true,
     "website": "https://remix.run/"
   },
+  "Remixd": {
+    "cats": [
+      5
+    ],
+    "description": "Remixd is a platform that enables podcast creators to efficiently produce and share their podcasts with a worldwide audience. The platform provides various tools and features to support podcast creation, hosting, and distribution, such as podcast hosting, analytics, monetisation, and social media integration.",
+    "icon": "remixd.svg",
+    "scriptSrc": "tags\\.remixd\\.com/player",
+    "website": "https://www.remixd.com"
+  },
+  "Render": {
+    "cats": [
+      62
+    ],
+    "description": "Render is a cloud computing platform that provides a wide range of services, including web hosting, cloud computing, and application development. Render offers several hosting options, including static site hosting, web application hosting, and managed databases.",
+    "headers": {
+      "x-render-origin-server": "Render"
+    },
+    "icon": "Render.svg",
+    "pricing": [
+      "low",
+      "freemium",
+      "payg",
+      "recurring"
+    ],
+    "website": "https://render.com"
+  },
+  "Render Better": {
+    "cats": [
+      92,
+      100
+    ],
+    "description": "Render Better is automated site speed and core web vital optimisation platform for Shopify.",
+    "dns": {
+      "CNAME": "\\.renderbetter\\.app"
+    },
+    "icon": "renderbetter.svg",
+    "js": {
+      "renderbetter": ""
+    },
+    "requires": "Shopify",
+    "website": "https://www.renderbetter.com"
+  },
+  "Replicache": {
+    "cats": [
+      12,
+      23
+    ],
+    "description": "Replicache is a JavaScript framework for building high-performance, offline-capable, collaborative web apps.",
+    "headers": {
+      "x-replicache-requestid": ""
+    },
+    "icon": "Replicache.svg",
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://replicache.dev/"
+  },
+  "Replit": {
+    "cats": [
+      47
+    ],
+    "description": "Replit is a platform for creating and sharing software.",
+    "headers": {
+      "expect-ct": "\\.repl\\.it/",
+      "replit-cluster": ""
+    },
+    "icon": "Replit.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "website": "https://replit.com"
+  },
+  "Reputon": {
+    "cats": [
+      90,
+      100
+    ],
+    "description": "Reputon is an customer reviews Shopify app.",
+    "icon": "Reputon.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "\\.reputon\\.com/",
+    "website": "https://reputon.com"
+  },
   "RequireJS": {
     "cats": [
       12
     ],
     "description": "RequireJS is a JavaScript library and file loader which manages the dependencies between JavaScript files and in modular programming.",
-    "icon": "RequireJS.png",
+    "icon": "RequireJS.svg",
     "js": {
       "requirejs.version": "^(.+)$\\;version:\\1"
     },
     "scriptSrc": "require.*\\.js",
-    "website": "http://requirejs.org"
+    "website": "https://requirejs.org"
   },
   "ResDiary": {
     "cats": [
@@ -908,6 +1476,25 @@
     "scriptSrc": "www\\.resengo\\.\\w+",
     "website": "https://wwc.resengo.com"
   },
+  "Reserve In-Store": {
+    "cats": [
+      100,
+      93
+    ],
+    "description": "Reserve In-Store app will allow customers to reserve an item in your store online to come to pick it up or view the item before making the purchase.",
+    "icon": "Reserve In-Store.svg",
+    "implies": "Shopify",
+    "js": {
+      "reserveInStore.version": "([\\d\\.]+)\\;version:\\1",
+      "reserveInStoreJsUrl": "/reserveinstore\\.js.+\\.myshopify\\.com"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.reserveinstore.com"
+  },
   "Reservio": {
     "cats": [
       93,
@@ -933,13 +1520,13 @@
     "cats": [
       22
     ],
-    "cpe": "cpe:/a:caucho:resin",
+    "cpe": "cpe:2.3:a:caucho:resin:*:*:*:*:*:*:*:*",
     "headers": {
       "Server": "^Resin(?:/(\\S*))?\\;version:\\1"
     },
     "icon": "Resin.png",
     "implies": "Java",
-    "website": "http://caucho.com"
+    "website": "https://caucho.com"
   },
   "Resmio": {
     "cats": [
@@ -959,6 +1546,30 @@
     "saas": true,
     "scriptSrc": "static\\.resmio\\.\\w+/static/",
     "website": "https://www.resmio.com"
+  },
+  "Resova": {
+    "cats": [
+      72
+    ],
+    "description": "Resova is an online booking software.",
+    "dom": {
+      "a[href*='.resova.']": {
+        "attributes": {
+          "href": "\\.resova\\.(?:us|eu|co\\.uk)"
+        }
+      }
+    },
+    "icon": "Resova.svg",
+    "js": {
+      "baseUrl": "\\.resova\\.(?:us|eu|co\\.uk)",
+      "initResova": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://resova.com"
   },
   "Responsive Lightbox & Gallery": {
     "cats": [
@@ -1038,6 +1649,77 @@
     "scriptSrc": "cdn\\.retailrocket\\.net",
     "website": "https://retailrocket.net"
   },
+  "Return Prime": {
+    "cats": [
+      100,
+      102
+    ],
+    "description": "Return Prime is an application to manage returns for Shopify stores.",
+    "icon": "return-prime.png",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "scriptSrc": "//return-prime-proxy-prod\\.s3[^ ]*\\.amazonaws\\.com/",
+    "website": "https://www.returnprime.com/"
+  },
+  "ReturnGO": {
+    "cats": [
+      102
+    ],
+    "description": "ReturnGO's AI-driven returns management platform significantly improves customer lifetime value and post-purchase experience.",
+    "icon": "ReturnGO.png",
+    "js": {
+      "returnGoCanBeRun": "",
+      "returnGoIntegrationData": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.returngo\\.ai/",
+    "website": "https://returngo.ai"
+  },
+  "Returnly": {
+    "cats": [
+      102
+    ],
+    "description": "Returnly is the provider of digital return experiences for direct-to-consumer brands.",
+    "dom": "a[href*='.returnly.com/']",
+    "icon": "Returnly.svg",
+    "js": {
+      "Returnly.ContainerSwitcher": "",
+      "Returnly.InternalEventTracker": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://returnly.com"
+  },
+  "Retype": {
+    "cats": [
+      57
+    ],
+    "description": "Retype is an open-source static site generator built with Node.js that allows users to create and manage websites with ease using Markdown as the primary content format.",
+    "icon": "retype.svg",
+    "implies": "Node.js",
+    "meta": {
+      "generator": "Retype\\s([\\d\\.]+)?\\;version:\\1"
+    },
+    "oss": true,
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "onetime"
+    ],
+    "website": "https://retype.com"
+  },
   "RevJet": {
     "cats": [
       36
@@ -1081,7 +1763,7 @@
       "Reveal.VERSION": "^(.+)$\\;version:\\1"
     },
     "scriptSrc": "(?:^|/)reveal(?:\\.min)?\\.js",
-    "website": "http://lab.hakim.se/reveal-js"
+    "website": "https://lab.hakim.se/reveal-js"
   },
   "Revel": {
     "cats": [
@@ -1095,14 +1777,30 @@
     "implies": "Go",
     "website": "https://revel.github.io"
   },
-  "RevenueHut": {
+  "RevenueHunt": {
     "cats": [
       71
     ],
-    "description": "RevenueHut is an affiliate marketing and advertising company specializing in paid surveys and cost per lead campaigns.",
-    "icon": "RevenueHut.png",
+    "description": "RevenueHunt is an affiliate marketing and advertising company specializing in paid surveys and cost per lead campaigns.",
+    "icon": "RevenueHunt.png",
     "scriptSrc": "admin\\.revenuehunt\\.com/",
-    "website": "https://revenuehut.com"
+    "website": "https://revenuehunt.com"
+  },
+  "Revieve": {
+    "cats": [
+      76
+    ],
+    "description": "Revieve is a technology company delivering consumer-centric personalised digital brand experiences powered by AI/AR.",
+    "icon": "Revieve.svg",
+    "js": {
+      "Revieve.__esModule": "",
+      "revieveConfig.onClickProduct": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.revieve.com"
   },
   "ReviewSolicitors": {
     "cats": [
@@ -1120,6 +1818,24 @@
     "scriptSrc": "\\.reviewsolicitors\\.co\\.uk/",
     "website": "https://www.reviewsolicitors.co.uk"
   },
+  "Reviews.io": {
+    "cats": [
+      90
+    ],
+    "description": "Reviews.io is a review collection tool for companies to collect merchant (company) & product reviews from genuine customers, then share these on Google.",
+    "dom": "a[href*='.reviews.io/company-reviews/']",
+    "icon": "Reviews.io.svg",
+    "js": {
+      "reviewsio_hasVoted": "",
+      "reviewsio_shareLink": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.reviews.io"
+  },
   "RevolverMaps": {
     "cats": [
       35
@@ -1129,19 +1845,43 @@
     "scriptSrc": "\\.revolvermaps\\.com",
     "website": "https://www.revolvermaps.com"
   },
-  "Revslider": {
+  "Revv": {
     "cats": [
-      19,
-      87
+      111
     ],
-    "description": "Slider Revolution is a WordPress plugin that allows you to create responsive sliders with many animation effects, text, image and video layers, and many other features.",
-    "html": [
-      "<link[^>]* href=[\\'\"][^']+revslider[/\\w-]+\\.css\\?ver=([0-9.]+)[\\'\"]\\;version:\\1"
+    "description": "Revv is a lead optimisation and donation platform.",
+    "icon": "Revv.png",
+    "meta": {
+      "revv-api-domain": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
     ],
-    "icon": "revslider.png",
-    "requires": "WordPress",
-    "scriptSrc": "/revslider/[/\\w-]+/js",
-    "website": "https://revolution.themepunch.com/"
+    "saas": true,
+    "website": "https://revv.com"
+  },
+  "Revy": {
+    "cats": [
+      100
+    ],
+    "description": "Revy is dedicated to build Shopify Apps to generate more sales for merchants.",
+    "icon": "Revy.png",
+    "js": {
+      "RevyApp": "",
+      "RevyBundle": "",
+      "RevyUpsell": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "api\\.revy\\.io/",
+    "website": "https://revy.io"
   },
   "Rewardful": {
     "cats": [
@@ -1195,6 +1935,24 @@
     "saas": true,
     "website": "https://www.rezgo.com"
   },
+  "Rich Plugins Reviews": {
+    "cats": [
+      87,
+      90
+    ],
+    "description": "Rich Plugins Reviews is a WordPress plugin that integrates verified reviews from trusted sources such as Google and Facebook.",
+    "dom": "link[href*='/wp-content/plugins/widget-google-reviews/']",
+    "icon": "Rich Plugins.png",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "requires": "WordPress",
+    "saas": true,
+    "scriptSrc": "/wp-content/plugins/widget-google-reviews/",
+    "website": "https://richplugins.com/business-reviews-bundle-wordpress-plugin"
+  },
   "RichRelevance": {
     "cats": [
       76
@@ -1212,6 +1970,26 @@
     "scriptSrc": "\\.richrelevance\\.com/",
     "website": "https://richrelevance.com"
   },
+  "Richpanel": {
+    "cats": [
+      53
+    ],
+    "description": "Richpanel is a purpose-built CRM and customer support platform for ecommerce and DTC brands.",
+    "icon": "Richpanel.svg",
+    "js": {
+      "Richpanel.PLUGIN_API_URL": "",
+      "RichpanelAppProxy": "",
+      "richpanel_messenger_url": ""
+    },
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.richpanel\\.com/",
+    "website": "https://www.richpanel.com"
+  },
   "Rickshaw": {
     "cats": [
       25
@@ -1221,18 +1999,19 @@
       "Rickshaw": ""
     },
     "scriptSrc": "rickshaw(?:\\.min)?\\.js",
-    "website": "http://code.shutterstock.com/rickshaw/"
+    "website": "https://code.shutterstock.com/rickshaw/"
   },
   "RightJS": {
     "cats": [
       12
     ],
+    "description": "RightJS is a modular JavaScript framework.",
     "icon": "RightJS.png",
     "js": {
       "RightJS": ""
     },
-    "scriptSrc": "right\\.js",
-    "website": "http://rightjs.org"
+    "oss": true,
+    "website": "https://github.com/rightjs"
   },
   "Riot": {
     "cats": [
@@ -1244,6 +2023,23 @@
     },
     "scriptSrc": "riot(?:\\+compiler)?(?:\\.min)?\\.js",
     "website": "https://riot.js.org/"
+  },
+  "Ripple": {
+    "cats": [
+      12
+    ],
+    "description": "Ripple is the frontend framework for Single Digital Presence, delivered using Nuxt and Vue.js.",
+    "headers": {
+      "x-sdp-app-type": "ripple"
+    },
+    "icon": "ripple.png",
+    "implies": [
+      "Nuxt.js",
+      "Vue.js",
+      "Drupal"
+    ],
+    "oss": true,
+    "website": "https://dpc-sdp.github.io/sdp-docs/ripple/"
   },
   "Rise.ai": {
     "cats": [
@@ -1301,7 +2097,37 @@
     "meta": {
       "generator": "^RiteCMS(?: (.+))?\\;version:\\1"
     },
-    "website": "http://ritecms.com"
+    "website": "https://ritecms.com"
+  },
+  "Rive": {
+    "cats": [
+      25
+    ],
+    "description": "Rive is a real-time interactive design and animation tool.",
+    "icon": "Rive.svg",
+    "js": {
+      "rive.Rive": ""
+    },
+    "pricing": [
+      "freemium",
+      "payg",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://rive.app"
+  },
+  "RoadRunner": {
+    "cats": [
+      22
+    ],
+    "description": "RoadRunner is a high-performance PHP application server, load balancer, and process manager written in Golang.",
+    "headers": {
+      "Server": "RoadRunner"
+    },
+    "icon": "RoadRunner.svg",
+    "implies": "PHP",
+    "oss": true,
+    "website": "https://roadrunner.dev"
   },
   "Roadiz CMS": {
     "cats": [
@@ -1331,7 +2157,7 @@
       "robin_settings": "",
       "robin_storage_settings": ""
     },
-    "website": "http://www.robinhq.com"
+    "website": "https://www.robinhq.com"
   },
   "RockRMS": {
     "cats": [
@@ -1349,7 +2175,7 @@
     "meta": {
       "generator": "^Rock v([0-9.]+)\\;version:\\1"
     },
-    "website": "http://www.rockrms.com"
+    "website": "https://www.rockrms.com"
   },
   "Rockerbox": {
     "cats": [
@@ -1384,6 +2210,61 @@
     "saas": true,
     "website": "https://rocket.chat"
   },
+  "Rocketfy": {
+    "cats": [
+      6,
+      51
+    ],
+    "description": "Rocketfy is a platform that allows users to build an online store and allows dropshipping at the same time.",
+    "icon": "Rocketfy.svg",
+    "implies": [
+      "React",
+      "Next.js"
+    ],
+    "meta": {
+      "generator": "^Rocketfy\\sMaker\\s-\\sv([\\d\\.]+)$\\;version:\\1"
+    },
+    "pricing": [
+      "payg"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.rocketfy\\.mx/",
+    "website": "https://rocketfy.mx"
+  },
+  "Roistat": {
+    "cats": [
+      10,
+      74
+    ],
+    "description": "Roistat is a marketing analytics system.",
+    "icon": "roistat.svg",
+    "js": {
+      "roistatHost": "",
+      "roistatProjectId": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "website": "https://roistat.com/"
+  },
+  "Rokt": {
+    "cats": [
+      76
+    ],
+    "description": "Rokt is an ecommerce marketing technology that gives customers a personalised and relevant experience while buying online.",
+    "headers": {
+      "Content-Security-Policy": "\\.rokt\\.com"
+    },
+    "icon": "Rokt.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.rokt\\.com/",
+    "website": "https://www.rokt.com"
+  },
   "Rollbar": {
     "cats": [
       13
@@ -1393,6 +2274,21 @@
       "rollbar\\.js/([0-9.]+)\\;version:\\1"
     ],
     "website": "https://rollbar.com/"
+  },
+  "Rosti": {
+    "cats": [
+      88
+    ],
+    "description": "Rosti is a hosting service suitable for development and production deployment of web applications.",
+    "headers": {
+      "X-Rosti": ""
+    },
+    "icon": "Rosti.png",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "website": "https://rosti.cz"
   },
   "Rotic": {
     "cats": [
@@ -1408,12 +2304,13 @@
       "recurring"
     ],
     "saas": true,
-    "website": "https://rotic.ir"
+    "website": "https://rotic.io"
   },
   "RoundCube": {
     "cats": [
       30
     ],
+    "cpe": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
     "description": "RoundCube is free and open-source web-based IMAP email client.",
     "html": "<title>RoundCube",
     "icon": "RoundCube.png",
@@ -1422,11 +2319,11 @@
       "rcmail": "",
       "roundcube": ""
     },
-    "website": "http://roundcube.net"
+    "website": "https://roundcube.net"
   },
   "Route": {
     "cats": [
-      19
+      107
     ],
     "description": "Route is a delivery and shipping tracking app",
     "icon": "route.png",
@@ -1448,6 +2345,22 @@
     ],
     "website": "https://www.royalmail.com"
   },
+  "Rubedo": {
+    "cats": [
+      1
+    ],
+    "description": "Rubedo is an open-source PHP CMS powered by the Zend Framework, NoSQL MongoDB, Elasticsearch, and AngularJS, offering advanced features for content management and development.",
+    "implies": [
+      "MongoDB",
+      "Elasticsearch",
+      "PHP"
+    ],
+    "js": {
+      "rubedoConfig": ""
+    },
+    "oss": true,
+    "website": "https://github.com/WebTales/rubedo"
+  },
   "Rubicon Project": {
     "cats": [
       36
@@ -1468,20 +2381,20 @@
     "icon": "Rubicon Project.svg",
     "saas": true,
     "scriptSrc": "https?://[^/]*\\.rubiconproject\\.com",
-    "website": "http://rubiconproject.com/",
+    "website": "https://rubiconproject.com/",
     "xhr": "\\.rubiconproject\\.com"
   },
   "Ruby": {
     "cats": [
       27
     ],
-    "cpe": "cpe:/a:ruby-lang:ruby",
+    "cpe": "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*",
     "description": "Ruby is an open-source object-oriented programming language.",
     "headers": {
-      "Server": "(?:Mongrel|WEBrick|Ruby)"
+      "Server": "(?:Mongrel|Ruby(?:/([\\d\\.]+))?)\\;version:\\1"
     },
     "icon": "Ruby.png",
-    "website": "http://ruby-lang.org"
+    "website": "https://ruby-lang.org"
   },
   "Ruby Receptionists": {
     "cats": [
@@ -1507,17 +2420,18 @@
     "cookies": {
       "_session_id": "\\;confidence:75"
     },
-    "cpe": "cpe:/a:rubyonrails:rails",
+    "cpe": "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*",
     "description": "Ruby on Rails is a server-side web application framework written in Ruby under the MIT License.",
     "headers": {
       "Server": "mod_(?:rails|rack)",
       "X-Powered-By": "mod_(?:rails|rack)"
     },
-    "icon": "Ruby on Rails.png",
+    "icon": "Ruby on Rails.svg",
     "implies": "Ruby",
     "js": {
       "ReactOnRails": "",
-      "__REACT_ON_RAILS_EVENT_HANDLERS_RAN_ONCE__": ""
+      "__REACT_ON_RAILS_EVENT_HANDLERS_RAN_ONCE__": "",
+      "_rails_loaded": ""
     },
     "meta": {
       "csrf-param": "^authenticity_token$\\;confidence:50"
@@ -1527,7 +2441,7 @@
   },
   "Rudderstack": {
     "cats": [
-      10
+      97
     ],
     "description": "Rudderstack is a customer data platform (CDP) that helps you collect, clean, and control your customer data.",
     "icon": "Rudderstack.png",
@@ -1540,17 +2454,41 @@
     ],
     "website": "https://rudderstack.com/"
   },
+  "Rumble": {
+    "cats": [
+      14
+    ],
+    "description": "Rumble is a Canadian video-streaming platform that presents itself as an alternative to YouTube.",
+    "dom": "iframe[src*='//rumble.com/']",
+    "icon": "Rumble.svg",
+    "js": {
+      "Rumble.gdpr": "",
+      "Rumble.resize": ""
+    },
+    "website": "https://rumble.com"
+  },
+  "Rust": {
+    "cats": [
+      27
+    ],
+    "description": "Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.",
+    "icon": "Rust.svg",
+    "oss": true,
+    "website": "https://www.rust-lang.org"
+  },
   "RxJS": {
     "cats": [
       12
     ],
+    "description": "RxJS is a reactive library used to implement reactive programming to deal with async implementation, callbacks, and event-based programs.",
     "icon": "RxJS.png",
     "js": {
       "Rx.CompositeDisposable": "",
       "Rx.Symbol": ""
     },
+    "oss": true,
     "scriptSrc": "rx(?:\\.\\w+)?(?:\\.compat|\\.global)?(?:\\.min)?\\.js",
-    "website": "http://reactivex.io"
+    "website": "https://reactivex.io"
   },
   "Ryviu": {
     "cats": [
@@ -1574,21 +2512,25 @@
     "cats": [
       16
     ],
-    "html": [
-      "<div[^>]+id=\"recaptcha_image",
-      "<link[^>]+recaptcha",
-      "<div[^>]+class=\"g-recaptcha\""
-    ],
+    "description": "reCAPTCHA is a free service from Google that helps protect websites from spam and abuse.",
+    "dom": "#recaptcha_image, iframe[src*='.google.com/recaptcha/'], div.g-recaptcha",
     "icon": "reCAPTCHA.svg",
     "js": {
       "Recaptcha": "",
       "recaptcha": ""
     },
+    "pricing": [
+      "freemium",
+      "payg",
+      "poa"
+    ],
+    "saas": true,
     "scriptSrc": [
       "api-secure\\.recaptcha\\.net",
       "recaptcha_ajax\\.js",
-      "/recaptcha/api\\.js"
+      "/recaptcha/(?:api|enterprise)\\.js"
     ],
+    "scripts": "/recaptcha/api\\.js",
     "website": "https://www.google.com/recaptcha/"
   }
 }

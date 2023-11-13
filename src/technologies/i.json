@@ -5,13 +5,13 @@
     ],
     "icon": "IBM.svg",
     "scriptSrc": "cmdatatagutils\\.js",
-    "website": "http://ibm.com/software/marketing-solutions/coremetrics"
+    "website": "https://ibm.com/software/marketing-solutions/coremetrics"
   },
   "IBM DataPower": {
     "cats": [
       64
     ],
-    "cpe": "cpe:/a:ibm:datapower_gateway",
+    "cpe": "cpe:2.3:a:ibm:datapower_gateway:*:*:*:*:*:*:*:*",
     "description": "IBM DataPower Gateway is a single multi-channel gateway designed to help provide security, control, integration and optimized access to a full range of mobile, web, application programming interface (API), service-oriented architecture (SOA), B2B and cloud workloads.",
     "headers": {
       "X-Backside-Transport": "",
@@ -24,25 +24,45 @@
     "cats": [
       22
     ],
-    "cpe": "cpe:/a:ibm:http_server",
+    "cpe": "cpe:2.3:a:ibm:http_server:*:*:*:*:*:*:*:*",
     "headers": {
       "Server": "IBM_HTTP_Server(?:/([\\d.]+))?\\;version:\\1"
     },
     "icon": "IBM.svg",
-    "website": "http://ibm.com/software/webservers/httpservers"
+    "website": "https://ibm.com/software/webservers/httpservers"
+  },
+  "ID5": {
+    "cats": [
+      36
+    ],
+    "cookies": {
+      "id5": ""
+    },
+    "description": "ID5 is a company that offers an identity solution for digital advertising, providing a Universal ID that enables privacy-compliant user recognition and tracking across websites without relying on personal information or third-party cookies.",
+    "icon": "ID5.svg",
+    "js": {
+      "ID5._version": "^(.+)$\\;version:\\1",
+      "__id5_instances": ""
+    },
+    "saas": true,
+    "scriptSrc": [
+      "^https://(?:cdn\\.)?id5-sync\\.com/"
+    ],
+    "website": "https://id5.io/",
+    "xhr": ".*id5-sync\\.com"
   },
   "IIS": {
     "cats": [
       22
     ],
-    "cpe": "cpe:/a:microsoft:internet_information_server",
+    "cpe": "cpe:2.3:a:microsoft:internet_information_server:*:*:*:*:*:*:*:*",
     "description": "Internet Information Services (IIS) is an extensible web server software created by Microsoft for use with the Windows NT family.",
     "headers": {
       "Server": "^(?:Microsoft-)?IIS(?:/([\\d.]+))?\\;version:\\1"
     },
-    "icon": "IIS.png",
+    "icon": "Microsoft.svg",
     "implies": "Windows Server",
-    "website": "http://www.iis.net"
+    "website": "https://www.iis.net"
   },
   "INFOnline": {
     "cats": [
@@ -71,6 +91,22 @@
     ],
     "website": "https://www.ionos.com"
   },
+  "IP2Location.io": {
+    "cats": [
+      79
+    ],
+    "cookies": {
+      "ip2location_redirection_first_visit": ""
+    },
+    "description": "IP2Location.io is a web service that provides geolocation data based on IP addresses through its API, allowing developers to integrate accurate physical location information into their applications.",
+    "icon": "IP2Location.io.svg",
+    "pricing": [
+      "mid",
+      "freemium",
+      "recurring"
+    ],
+    "website": "https://www.ip2location.io"
+  },
   "IPB": {
     "cats": [
       2
@@ -93,6 +129,25 @@
     "scriptSrc": "jscripts/ips_",
     "website": "https://invisioncommunity.com/"
   },
+  "IPFS": {
+    "cats": [
+      48
+    ],
+    "description": "IPFS is a peer-to-peer hypermedia protocol that provides a distributed hypermedia web.",
+    "headers": {
+      "x-cf-ipfs-cache-status": "",
+      "x-ipfs-datasize": "",
+      "x-ipfs-gateway-host": "",
+      "x-ipfs-lb-pop": "",
+      "x-ipfs-path": "",
+      "x-ipfs-pop": "",
+      "x-ipfs-root": "",
+      "x-ipfs-root-cid": "",
+      "x-ipfs-roots": ""
+    },
+    "icon": "IPFS.svg",
+    "website": "https://ipfs.tech/"
+  },
   "IPInfoDB": {
     "cats": [
       79
@@ -102,6 +157,31 @@
     "saas": true,
     "website": "https://www.ipinfodb.com/",
     "xhr": "api\\.ipinfodb\\.com"
+  },
+  "IPinfo": {
+    "cats": [
+      79
+    ],
+    "description": "IPinfo is an IP address data provider.",
+    "icon": "IPinfo.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "ipinfo\\.io/",
+    "website": "https://ipinfo.io",
+    "xhr": "ipinfo\\.io/"
+  },
+  "ISAY": {
+    "cats": [
+      1
+    ],
+    "description": "ISAY (Internet Pages Management) is a CMS service provided by the Turkish Ministry of Interior for governorships, district governorships and various official websites.",
+    "dom": "div.topbar-img img[src*='/Areas/WebPart/Contents/FHeader/img/ataturk.svg']",
+    "icon": "ISAY.png",
+    "requires": "Microsoft ASP.NET",
+    "website": "https://www.icisleri.gov.tr/internet-sayfalari-yonetimi-isay"
   },
   "Iamport": {
     "cats": [
@@ -118,6 +198,29 @@
     "saas": true,
     "scriptSrc": "cdn\\.iamport\\.kr/js/iamport\\.payment-([\\d\\.]+)\\.js\\;version:\\1",
     "website": "https://www.iamport.kr"
+  },
+  "Ibexa DXP ": {
+    "cats": [
+      1
+    ],
+    "description": "Ibexa DXP is an open-source enterprise PHP content management system (CMS) and Digital Experience Platform (DXP) developed by the company Ibexa (known previously as eZ Systems).",
+    "headers": {
+      "x-powered-by": "^Ibexa\\sExperience\\sv([\\d\\.]+)$\\;version:\\1"
+    },
+    "icon": "Ibexa.svg",
+    "implies": [
+      "PHP",
+      "Symfony"
+    ],
+    "meta": {
+      "generator": "^eZ Platform"
+    },
+    "pricing": [
+      "high",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.ibexa.co"
   },
   "Ideasoft": {
     "cats": [
@@ -155,6 +258,31 @@
     },
     "website": "https://www.idosell.com"
   },
+  "Ikas": {
+    "cats": [
+      6
+    ],
+    "description": "Ikas is a new generation ecommerce platform designed for small businesses.",
+    "headers": {
+      "server": "^ikas$",
+      "x-powered-by": "^ikas$"
+    },
+    "icon": "Ikas.svg",
+    "implies": [
+      "Next.js",
+      "GraphQL",
+      "MongoDB"
+    ],
+    "js": {
+      "IkasEvents.subscribe": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://ikas.com"
+  },
   "Iluria": {
     "cats": [
       6,
@@ -189,6 +317,21 @@
     "saas": true,
     "scriptSrc": "static\\.imagerelay\\.com/",
     "website": "https://www.imagerelay.com"
+  },
+  "ImageEngine": {
+    "cats": [
+      31,
+      92
+    ],
+    "description": "ImageEngine is an intelligent image content delivery network. ImageEngine will resize your image content tailored to the end users device.",
+    "dom": "link[href*='.imgeng.in/'], img[src*='.imgeng.in/'], img[data-src*='.imgeng.in/'], source[srcset*='.imgeng.in/']",
+    "icon": "ImageEngine.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://imageengine.io"
   },
   "Imagely NextGEN Gallery": {
     "cats": [
@@ -227,6 +370,24 @@
     "saas": true,
     "website": "https://imber.live"
   },
+  "Imgix": {
+    "cats": [
+      31,
+      95
+    ],
+    "description": "Imgix is a visual media platform for managing, processing, rendering, optimising and delivering your existing images.",
+    "dns": {
+      "SOA": "\\.imgix\\.net"
+    },
+    "dom": "img[src*='.imgix.net/'], img[data-src*='.imgix.net/'], img[srcset*='.imgix.net/'], source[src*='.imgix.net/'], source[data-src*='.imgix.net/']",
+    "icon": "Imgix.svg",
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "website": "https://imgix.com/"
+  },
   "Immutable.js": {
     "cats": [
       59
@@ -254,10 +415,13 @@
   },
   "Imperva": {
     "cats": [
-      16
+      16,
+      31
     ],
+    "description": "Imperva is a cyber security software and services company for networking, data, and application security.",
     "headers": {
-      "X-Iinfo": ""
+      "X-Iinfo": "",
+      "x-cdn": "^Imperva"
     },
     "icon": "Imperva.svg",
     "scriptSrc": [
@@ -273,26 +437,43 @@
       "ICMSSession": "",
       "ImpressCMS": ""
     },
-    "cpe": "cpe:/a:impresscms:impresscms",
+    "cpe": "cpe:2.3:a:impresscms:impresscms:*:*:*:*:*:*:*:*",
     "icon": "ImpressCMS.png",
     "implies": "PHP",
     "meta": {
       "generator": "ImpressCMS"
     },
     "scriptSrc": "include/linkexternal\\.js",
-    "website": "http://www.impresscms.org"
+    "website": "https://www.impresscms.org"
   },
   "ImpressPages": {
     "cats": [
       1
     ],
-    "cpe": "cpe:/a:impresspages:impresspages_cms",
+    "cpe": "cpe:2.3:a:impresspages:impresspages_cms:*:*:*:*:*:*:*:*",
     "icon": "ImpressPages.png",
     "implies": "PHP",
     "meta": {
       "generator": "ImpressPages(?: CMS)?( [\\d.]*)?\\;version:\\1"
     },
-    "website": "http://impresspages.org"
+    "website": "https://impresspages.org"
+  },
+  "Imunify360": {
+    "cats": [
+      16
+    ],
+    "description": "Imunify360 is a comprehensive security platform for Linux web servers which utilises machine learning technology and other advanced techniques to provide protection against various types of cyber threats, such as malware, viruses, and other attacks.",
+    "headers": {
+      "Server": "imunify360-webshield/([\\d\\.]+)\\;version:\\1"
+    },
+    "icon": "Imunify360.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://www.imunify360.com"
   },
   "Imweb": {
     "cats": [
@@ -312,6 +493,52 @@
     "scriptSrc": "vendor-cdn\\.imweb\\.me/",
     "website": "https://imweb.me"
   },
+  "In Cart Upsell & Cross-Sell": {
+    "cats": [
+      100
+    ],
+    "description": "In Cart Upsell & Cross-Sell is a Shopify app built by InCart Upsell, provides targeted upsells and cross-sells directly in your cart and product page.",
+    "icon": "In Cart Upsell & Cross-Sell.png",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "\\.incartupsell\\.com/",
+    "website": "https://incartupsell.com"
+  },
+  "InMoment": {
+    "cats": [
+      10,
+      73
+    ],
+    "description": "InMoment provides SaaS based customer survey and enterprise feedback management solutions.",
+    "headers": {
+      "Content-Security-Policy": "\\.inmoment\\.com",
+      "Content-Security-Policy-Report-Only": "\\.inmoment\\.com"
+    },
+    "icon": "InMoment.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.inmoment\\.com(?:\\.\\w+)?/",
+    "website": "https://inmoment.com"
+  },
+  "InSyncai": {
+    "cats": [
+      52
+    ],
+    "description": "InSyncai offers a conversational platform for enterprises to design and build chatbots having applications in customer support and services.",
+    "dom": "iframe[src*='insync_iframe_webchat_js_prod'], iframe#insync-iframe",
+    "icon": "InSyncai.png",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.insyncai.com"
+  },
   "Incapsula": {
     "cats": [
       31
@@ -321,7 +548,7 @@
       "X-CDN": "Incapsula"
     },
     "icon": "Incapsula.png",
-    "website": "http://www.incapsula.com"
+    "website": "https://www.incapsula.com"
   },
   "Includable": {
     "cats": [
@@ -331,7 +558,7 @@
       "X-Includable-Version": ""
     },
     "icon": "Includable.svg",
-    "website": "http://includable.com"
+    "website": "https://includable.com"
   },
   "Index Exchange": {
     "cats": [
@@ -346,17 +573,30 @@
     "cats": [
       1
     ],
-    "cpe": "cpe:/a:indexhibit:indexhibit",
+    "cpe": "cpe:2.3:a:indexhibit:indexhibit:*:*:*:*:*:*:*:*",
     "html": "<(?:link|a href) [^>]+ndxz-studio",
     "implies": [
       "PHP",
-      "Apache",
+      "Apache HTTP Server",
       "Exhibit"
     ],
     "meta": {
       "generator": "Indexhibit"
     },
-    "website": "http://www.indexhibit.org"
+    "website": "https://www.indexhibit.org"
+  },
+  "Indi": {
+    "cats": [
+      94
+    ],
+    "description": "Indi is a video social network where everyone - artists, brands, retailers, nonprofits, celebrities and individuals - can connect with fans and supporters to interact directly with your brand utilising exclusive Video Challenges and Video Threads tailor made by you.",
+    "icon": "Indi.png",
+    "js": {
+      "indi.formatStats": "",
+      "indiCountly.check_any_consent": "",
+      "indi_carousel.productCta": ""
+    },
+    "website": "https://indi.com"
   },
   "Indico": {
     "cats": [
@@ -367,7 +607,7 @@
     },
     "html": "Powered by\\s+(?:CERN )?<a href=\"http://(?:cdsware\\.cern\\.ch/indico/|indico-software\\.org|cern\\.ch/indico)\">(?:CDS )?Indico( [\\d\\.]+)?\\;version:\\1",
     "icon": "Indico.png",
-    "website": "http://indico-software.org"
+    "website": "https://indico-software.org"
   },
   "Indy": {
     "cats": [
@@ -376,13 +616,13 @@
     "headers": {
       "Server": "Indy(?:/([\\d.]+))?\\;version:\\1"
     },
-    "website": "http://indyproject.org"
+    "website": "https://indyproject.org"
   },
-  "Inertia": {
+  "Inertia.js": {
     "cats": [
       12
     ],
-    "description": "Inertia is a protocol for creating monolithic single-page applications.",
+    "description": "Inertia.js is a protocol for creating monolithic single-page applications.",
     "dom": {
       "div[data-page*='component']": {
         "attributes": {
@@ -391,11 +631,11 @@
       }
     },
     "headers": {
+      "Vary": "X-Inertia",
       "X-Inertia": ""
     },
     "icon": "Inertia.svg",
     "oss": true,
-    "saas": false,
     "website": "https://inertiajs.com"
   },
   "InfernoJS": {
@@ -408,6 +648,24 @@
       "Inferno.version": "^(.+)$\\;version:\\1"
     },
     "website": "https://infernojs.org"
+  },
+  "Infogram": {
+    "cats": [
+      5
+    ],
+    "description": "Infogram is a web-based data visualisation and infographics platform.",
+    "dom": "iframe[src*='.infogram.com/']",
+    "icon": "Infogram.svg",
+    "js": {
+      "InfogramEmbeds": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://infogram.com"
   },
   "Infolinks": {
     "cats": [
@@ -441,6 +699,36 @@
     ],
     "website": "https://www.infomaniak.com"
   },
+  "InforUMobile": {
+    "cats": [
+      52
+    ],
+    "description": "InforUMobile is a multi-channel system that enables digital communication with customers, offering various channels for interacting and engaging with users, developed by the Shamir Systems Group.",
+    "dom": "iframe[src*='bot.frontcld.com/bot/chat']",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.inforu.co.il"
+  },
+  "Infoset": {
+    "cats": [
+      52,
+      53
+    ],
+    "description": "Infoset is an advanced communication and support solutions.",
+    "icon": "Infoset.svg",
+    "js": {
+      "InfosetChat": "",
+      "InfosetRoot": ""
+    },
+    "pricing": [
+      "recurring",
+      "low"
+    ],
+    "saas": true,
+    "website": "https://infoset.app"
+  },
   "Insider": {
     "cats": [
       97
@@ -456,6 +744,22 @@
     "saas": true,
     "scriptSrc": "api\\.useinsider\\.\\w+/",
     "website": "https://useinsider.com"
+  },
+  "Insightly CRM": {
+    "cats": [
+      53
+    ],
+    "description": "Insightly CRM is a cloud-based customer relationship management software, helps businesses manage leads, contacts, and opportunities, track customer interactions, create custom reports, automate workflows, and integrate with third-party applications, improving customer engagement and streamlining business processes.",
+    "dom": "form[action*='.insightly.com/']",
+    "icon": "Insightly.svg",
+    "pricing": [
+      "recurring",
+      "low",
+      "payg"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.insightly\\.services/",
+    "website": "https://www.insightly.com/crm/"
   },
   "Inspectlet": {
     "cats": [
@@ -489,6 +793,34 @@
     },
     "scriptSrc": "/rokoInstabot\\.js",
     "website": "https://instabot.io/"
+  },
+  "Instafeed": {
+    "cats": [
+      100
+    ],
+    "description": "Instafeed is an official Instagram app.",
+    "icon": "Instafeed.png",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "instafeed\\.nfcube\\.com/",
+    "website": "https://apps.shopify.com/instafeed"
+  },
+  "Instamojo": {
+    "cats": [
+      41
+    ],
+    "description": "Instamojo is a Bangalore-based company that provides a platform for selling digital goods and collecting payment online.",
+    "icon": "instamojo.svg",
+    "js": {
+      "INITIAL_STATE.seller.avatar": "\\.instamojo\\.com/",
+      "Instamojo": ""
+    },
+    "website": "https://www.instamojo.com/"
   },
   "Instana": {
     "cats": [
@@ -527,13 +859,13 @@
     "cookies": {
       "InstantCMS[logdate]": ""
     },
-    "cpe": "cpe:/a:instantcms:instantcms",
+    "cpe": "cpe:2.3:a:instantcms:instantcms:*:*:*:*:*:*:*:*",
     "icon": "InstantCMS.png",
     "implies": "PHP",
     "meta": {
       "generator": "InstantCMS"
     },
-    "website": "http://www.instantcms.ru"
+    "website": "https://www.instantcms.ru"
   },
   "InstantClick": {
     "cats": [
@@ -547,7 +879,26 @@
     },
     "oss": true,
     "scriptSrc": "instantclick\\.min\\.js",
-    "website": "http://instantclick.io/"
+    "website": "https://instantclick.io/"
+  },
+  "InstantGeo": {
+    "cats": [
+      59
+    ],
+    "description": "InstantGeo is a service that provides IP geolocation to web pages",
+    "icon": "InstantGeo.svg",
+    "js": {
+      "geojs": ""
+    },
+    "pricing": [
+      "freemium"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "js\\.instantgeo\\.info",
+      "script\\.instantgeo\\.info"
+    ],
+    "website": "https://instantgeo.info"
   },
   "Instapage": {
     "cats": [
@@ -576,6 +927,28 @@
     ],
     "website": "https://instapage.com"
   },
+  "Instatus": {
+    "cats": [
+      13
+    ],
+    "description": "Instatus is a status and incident communication tool.",
+    "dom": {
+      "a.footer__link": {
+        "text": "Powered by Instatus"
+      },
+      "a[href*='instatus.com'][target='_blank'], iframe[src*='.instatus.com']": {
+        "exists": ""
+      }
+    },
+    "icon": "Instatus.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://instatus.com"
+  },
   "Integral Ad Science": {
     "cats": [
       36
@@ -595,13 +968,13 @@
       22,
       46
     ],
-    "cpe": "cpe:/a:intel:active_management_technology",
+    "cpe": "cpe:2.3:a:intel:active_management_technology:*:*:*:*:*:*:*:*",
     "description": "Intel Active Management Technology (AMT) is a proprietary remote management and control system for personal computers with Intel CPUs.",
     "headers": {
       "Server": "Intel\\(R\\) Active Management Technology(?: ([\\d.]+))?\\;version:\\1"
     },
     "icon": "Intel Active Management Technology.png",
-    "website": "http://intel.com"
+    "website": "https://intel.com"
   },
   "IntenseDebate": {
     "cats": [
@@ -610,7 +983,26 @@
     "description": "IntenseDebate is a blog commenting system that supports Typepad, Blogger and Wordpress blogs. The system allows blog owners to track and moderate comments from one place with features like threading, comment analytics, user reputation, and comment aggregation.",
     "icon": "IntenseDebate.png",
     "scriptSrc": "intensedebate\\.com",
-    "website": "http://intensedebate.com"
+    "website": "https://intensedebate.com"
+  },
+  "Interact": {
+    "cats": [
+      5
+    ],
+    "description": "Interact is a tool for creating online quizzes.",
+    "icon": "Interact.svg",
+    "js": {
+      "InteractApp.name": "InteractApp",
+      "InteractPromotionObject": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.tryinteract\\.com/",
+    "website": "https://www.tryinteract.com"
   },
   "Intercom": {
     "cats": [
@@ -618,6 +1010,11 @@
       53
     ],
     "description": "Intercom is an American software company that produces a messaging platform which allows businesses to communicate with prospective and existing customers within their app, on their website, through social media, or via email.",
+    "dom": [
+      "link[href^='https://widget.intercom.io']",
+      "div.live-chat-loader-placeholder",
+      "iframe#intercom-frame"
+    ],
     "icon": "Intercom.svg",
     "js": {
       "Intercom": ""
@@ -638,6 +1035,24 @@
     "html": "<a href=\"https://www.intercom.com/intercom-link[^\"]+solution=customer-support[^>]+>We run on Intercom",
     "icon": "Intercom.svg",
     "website": "https://www.intercom.com/articles"
+  },
+  "Internet Brands": {
+    "cats": [
+      36
+    ],
+    "description": "Internet Brands is a technology company that operates a variety of web portals and online communities, providing information and services to consumers and businesses across a range of industries.",
+    "dom": {
+      "footer > div > form": {
+        "text": "Internet Brands"
+      }
+    },
+    "icon": "Internet Brands.png",
+    "pricing": [
+      "poa",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://www.internetbrands.com"
   },
   "Intersection Observer": {
     "cats": [
@@ -665,7 +1080,7 @@
     ],
     "saas": true,
     "scriptSrc": "(?:is-bin|INTERSHOP)",
-    "website": "http://intershop.com"
+    "website": "https://intershop.com"
   },
   "Invenio": {
     "cats": [
@@ -677,7 +1092,7 @@
     "description": "Invenio is an open-source software framework for large-scale digital repositories that provides the tools for management of digital assets in an institutional repository and research data management systems.",
     "html": "(?:Powered by|System)\\s+(?:CERN )?<a (?:class=\"footer\" )?href=\"http://(?:cdsware\\.cern\\.ch(?:/invenio)?|invenio-software\\.org|cern\\.ch/invenio)(?:/)?\">(?:CDS )?Invenio</a>\\s*v?([\\d\\.]+)?\\;version:\\1",
     "icon": "Invenio.png",
-    "website": "http://invenio-software.org"
+    "website": "https://invenio-software.org"
   },
   "Inventrue": {
     "cats": [
@@ -696,22 +1111,6 @@
     "saas": true,
     "website": "https://www.inventrue.com"
   },
-  "Invoca": {
-    "cats": [
-      32
-    ],
-    "description": "Invoca is an AI-powered call tracking and conversational analytics company.",
-    "icon": "Invoca.svg",
-    "js": {
-      "Invoca.PNAPI.version": "([\\d\\.]+)\\;version:\\1",
-      "InvocaTagId": ""
-    },
-    "saas": true,
-    "pricing": [
-      "poa"
-    ],
-    "website": "https://www.invoca.com"
-  },
   "Inveon": {
     "cats": [
       6
@@ -729,15 +1128,35 @@
     "scriptSrc": "Scripts/_app/Inv(?:\\w+)\\.js\\?v=(.+)$\\;version:\\1",
     "website": "https://www.inveon.com"
   },
+  "Invoca": {
+    "cats": [
+      32,
+      10
+    ],
+    "description": "Invoca is an AI-powered call tracking and conversational analytics company.",
+    "icon": "Invoca.svg",
+    "js": {
+      "Invoca.PNAPI.version": "([\\d\\.]+)\\;version:\\1",
+      "InvocaTagId": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.dialogtech\\.com/",
+    "website": "https://www.invoca.com"
+  },
   "Ionic": {
     "cats": [
       18
     ],
-    "icon": "ionic.png",
+    "description": "Ionic is an open-source framework that enables developers to create cross-platform mobile, web, and desktop applications using web technologies like HTML, CSS, and JavaScript.",
+    "icon": "Ionic.svg",
     "js": {
       "Ionic.config": "",
       "Ionic.version": "^(.+)$\\;version:\\1"
     },
+    "oss": true,
     "website": "https://ionicframework.com"
   },
   "Ionicons": {
@@ -745,9 +1164,23 @@
       17
     ],
     "description": "Ionicons is an open-source icon set crafted for web, iOS, Android, and desktop apps.",
-    "html": "<link[^>]* href=[^>]+ionicons(?:\\.min)?\\.css",
-    "icon": "Ionicons.png",
-    "website": "http://ionicons.com"
+    "dom": "link[href*='/ionicons.min.css'], link[href*='/ionicons.css']",
+    "icon": "Ionicons.svg",
+    "oss": true,
+    "website": "https://ionicons.com"
+  },
+  "IrisLMS": {
+    "cats": [
+      21
+    ],
+    "description": "IrisLMS comprehensive education management system, in order to support e-learning and provide suitable conditions for holding online and offline classes with all facilities.",
+    "icon": "IrisLMS.png",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.irislms\\.ir/",
+    "website": "https://irislms.ir"
   },
   "Irroba": {
     "cats": [
@@ -796,6 +1229,18 @@
     "scriptSrc": "\\.issuu\\.com/",
     "website": "https://issuu.com"
   },
+  "Isso": {
+    "cats": [
+      15
+    ],
+    "description": "Isso is a lightweight commenting server written in Python and JavaScript, referred to as \"Ich schrei sonst\" in German.",
+    "js": {
+      "Isso.fetchComments": ""
+    },
+    "implies": "Python",
+    "oss": true,
+    "website": "https://github.com/posativ/isso/"
+  },
   "Iterable": {
     "cats": [
       32
@@ -810,6 +1255,25 @@
       "js\\.iterable\\.com"
     ],
     "website": "https://iterable.com/"
+  },
+  "Ivory Search": {
+    "cats": [
+      87
+    ],
+    "description": "Ivory Search is a WordPress search plugin that improves WordPress search by providing advanced options to extend search or exclude specific content from search.",
+    "icon": "ivory_searc.png",
+    "js": {
+      "IvorySearchVars": "",
+      "ivory_search_analytics": ""
+    },
+    "pricing": [
+      "freemium",
+      "recurring",
+      "onetime"
+    ],
+    "requires": "WordPress",
+    "scriptSrc": "/wp-content/plugins/add-search-to-menu/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
+    "website": "https://ivorysearch.com"
   },
   "Izooto": {
     "cats": [
@@ -854,7 +1318,7 @@
     ],
     "saas": true,
     "scriptSrc": "\\.i-mobile\\.co\\.jp/",
-    "website": "http://www2.i-mobile.co.jp"
+    "website": "https://www2.i-mobile.co.jp"
   },
   "i30con": {
     "cats": [
@@ -864,6 +1328,20 @@
     "dom": "[class^='i30con']",
     "icon": "30namaPlayer.png",
     "website": "https://30nama.com/"
+  },
+  "iAdvize": {
+    "cats": [
+      52
+    ],
+    "description": "iAdvize is a conversational marketing platform that connects customers in need of advice with experts who are available 24/7 via messaging.",
+    "dom": "link[href*='.iadvize.com']",
+    "icon": "iAdvize.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.iadvize\\.com/",
+    "website": "https://www.iadvize.com"
   },
   "iEXExchanger": {
     "cats": [
@@ -875,13 +1353,39 @@
     "icon": "iEXExchanger.png",
     "implies": [
       "PHP",
-      "Apache",
+      "Apache HTTP Server",
       "Angular"
     ],
     "meta": {
       "generator": "iEXExchanger"
     },
     "website": "https://exchanger.iexbase.com"
+  },
+  "iGoDigital": {
+    "cats": [
+      76
+    ],
+    "description": "iGoDigital provides web-based commerce tools, personalisation, and product recommendations designed to increase customer interaction.",
+    "icon": "default.svg",
+    "scriptSrc": "\\.igodigital\\.com/",
+    "website": "https://www.igodigital.com"
+  },
+  "iHomefinder IDX": {
+    "cats": [
+      19
+    ],
+    "description": "iHomefinder provides IDX property search, built-in CRM, and marketing tools.",
+    "icon": "iHomefinder IDX.png",
+    "js": {
+      "ihfJquery": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.idxhome\\.com/",
+    "website": "https://www.ihomefinder.com"
   },
   "iPresta": {
     "cats": [
@@ -895,7 +1399,20 @@
     "meta": {
       "designer": "iPresta"
     },
-    "website": "http://ipresta.ir"
+    "website": "https://ipresta.ir"
+  },
+  "iSina Chat": {
+    "cats": [
+      52
+    ],
+    "description": "iSina Chat is a live chat service that provides online support and FAQ for customers.",
+    "icon": "iSina Chat.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "chat\\.isina\\.agency/",
+    "website": "https://isina.agency"
   },
   "iThemes Security": {
     "cats": [
@@ -923,7 +1440,19 @@
     "meta": {
       "generator": "^iWeb( [\\d.]+)?\\;version:\\1"
     },
-    "website": "http://apple.com/ilife/iweb"
+    "website": "https://apple.com/ilife/iweb"
+  },
+  "idCloudHost": {
+    "cats": [
+      88
+    ],
+    "description": "idCloudHost is a local web service provider based in Indonesia that offer a wide range of services including domain name registration and cloud hosting.",
+    "dns": {
+      "NS": "ns\\d+\\.cloudhost\\.id",
+      "SOA": "ns\\d+\\.cloudhost\\.id"
+    },
+    "icon": "idCloudHost.png",
+    "website": "https://idcloudhost.com"
   },
   "ikiwiki": {
     "cats": [
@@ -935,21 +1464,46 @@
       "<a href=\"/(?:cgi-bin/)?ikiwiki\\.cgi\\?do="
     ],
     "icon": "ikiwiki.png",
-    "website": "http://ikiwiki.info"
+    "website": "https://ikiwiki.info"
   },
   "imperia CMS": {
     "cats": [
       1
     ],
-    "html": "<imp:live-info sysid=\"[0-9a-f-]+\"(?: node_id=\"[0-9/]*\")? *\\/>",
+    "description": "imperia CMS is a headless content management for large editorial.",
+    "dom": "source[srcset*='.de/imperia/md/images/']",
     "icon": "imperiaCMS.svg",
     "implies": "Perl",
     "meta": {
-      "GENERATOR": "^IMPERIA ([0-9.]{2,3})\\;version:\\1",
-      "X-Imperia-Live-Info": ""
+      "generator": "^IMPERIA\\s([\\d\\.\\_]+)\\;version:\\1",
+      "x-imperia-live-info": ""
     },
-    "url": "imperia/md/",
-    "website": "https://www.pirobase-imperia.com/de/produkte/produktuebersicht/imperia-cms"
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.pirobase-imperia.com/de/solutions/imperia-cms"
+  },
+  "inSales": {
+    "cats": [
+      6
+    ],
+    "description": "inSales is a SaaS ecommerce platform with multichannel integration.",
+    "icon": "inSales.svg",
+    "js": {
+      "InSales": "",
+      "InSalesUI": "",
+      "insalesGeocodeResults": ""
+    },
+    "meta": {
+      "insales-redefined-api-method": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.insales.com"
   },
   "inSided": {
     "cats": [
@@ -990,7 +1544,7 @@
       "clobs": ""
     },
     "scriptSrc": "clobs\\.js",
-    "website": "http://www.ip-label.com"
+    "website": "https://www.ip-label.com"
   },
   "ipapi": {
     "cats": [
@@ -1021,6 +1575,21 @@
     "saas": true,
     "website": "https://ipapi.co",
     "xhr": "ipapi\\.co/"
+  },
+  "ipbase": {
+    "cats": [
+      79
+    ],
+    "description": "ipbase offers an API that supports both IPv4 and IPv6 and provides precise location data from IP addresses.",
+    "icon": "ipbase.svg",
+    "pricing": [
+      "freemium",
+      "recurring",
+      "low"
+    ],
+    "saas": true,
+    "website": "https://ipbase.com",
+    "xhr": "api\\.ipbase\\.com"
   },
   "ipdata": {
     "cats": [
@@ -1090,10 +1659,35 @@
     "cats": [
       67
     ],
-    "icon": "iubenda.png",
-    "scriptSrc": [
-      "iubenda\\.com/cookie-solution/confs/js/"
+    "description": "iubenda is a compliance software used by businesses for their websites and apps.",
+    "icon": "iubenda.svg",
+    "js": {
+      "_iub": "",
+      "addIubendaCs": ""
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "freemium"
     ],
-    "website": "https://www.iubenda.com/"
+    "saas": true,
+    "scriptSrc": "iubenda\\.com/",
+    "website": "https://www.iubenda.com"
+  },
+  "iyzico": {
+    "cats": [
+      41
+    ],
+    "description": "iyzico is a payment receipt system management platform that offers ePayment solutions.",
+    "icon": "iyzico.svg",
+    "js": {
+      "iyz.ideaSoft": "",
+      "iyz.position": ""
+    },
+    "pricing": [
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://www.iyzico.com"
   }
 }
