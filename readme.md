@@ -10,6 +10,8 @@
 
 This library is a PHP version Fork of the Wappalyzer utility that uncovers the technologies used on websites. It detects content management systems, eCommerce platforms, web servers, JavaScript frameworks, analytics tools and many more.
 
+Up-to-date until 2023-08-23 https://github.com/dochne/wappalyzer
+
 # Installation
 
 Require this package in your `composer.json` and update composer.
