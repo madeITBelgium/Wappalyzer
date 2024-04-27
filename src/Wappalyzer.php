@@ -18,6 +18,7 @@ use Symfony\Component\DomCrawler\Crawler;
 class Wappalyzer
 {
     private $client;
+    private $crawler;
 
     private $categories;
     private $groups;
@@ -109,6 +110,7 @@ class Wappalyzer
             $language = is_array($matches) && count($matches) > 0 ? $matches[1] : null;
         }
 
+        $this->crawler = new Crawler($this->html);
         $this->doAnalyze($this->apps, $cats);
 
         return [
@@ -520,7 +522,7 @@ class Wappalyzer
             return;
         }
 
-        $crawler = new Crawler($this->html);
+        $crawler = $this->crawler;
 
         foreach ($patterns as $pattern) {
             foreach ($pattern as $selector) {
