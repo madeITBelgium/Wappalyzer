@@ -37,7 +37,7 @@ class Wappalyzer
     public function __construct($client = null)
     {
         if ($client === null) {
-            $this->client = new Client(['cookies' => true]);
+            $this->client = new Client(['cookies' => true, 'timeout' => 5]);
         } else {
             $this->client = $client;
         }
@@ -73,6 +73,8 @@ class Wappalyzer
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_VERBOSE, 0);
             curl_setopt($ch, CURLOPT_HEADER, 1);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5); 
+            curl_setopt($ch, CURLOPT_TIMEOUT, 5);
             curl_setopt($ch, CURLOPT_URL, $url);
 
             $response = curl_exec($ch);
